@@ -5,7 +5,7 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        <h1>Home Page</h1>
+        <h1>Add Member</h1>
     </div>
 </div>
 @endsection
