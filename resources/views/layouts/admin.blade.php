@@ -35,7 +35,7 @@
         @include('layouts.include.sidebar')
 
         <div class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-            @include('layouts.include.navbar')
+         @include('layouts.include.navbar')
             <div class="content">
                 @yield('content')
             </div>
