@@ -28,6 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\PageController::class, 'index']);
     Route::get('/addMember', [App\Http\Controllers\PageController::class, 'addMember']);
+    Route::post('/insertMember', [App\Http\Controllers\PageController::class, 'insertMember']);
     Route::get('/memberTable', [App\Http\Controllers\PageController::class, 'memberTable']);
     Route::get('/billing', [App\Http\Controllers\PageController::class, 'billing']);
     Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);

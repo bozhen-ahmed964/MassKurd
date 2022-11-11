@@ -19,10 +19,11 @@ return new class extends Migration
             $table->string('Full_Name');
             $table->Integer('Age');
             $table->string('Gender');
-            $table->Integer('Phone_Number');
+            $table->string('Phone_Number');
             $table->Integer('Weight');
             $table->string('Height');
             $table->string('Game_Type');
+            $table->string('Pay');
             $table->tinyInteger('Statues')->default('0');
             $table->longText('Health_Issue');
             $table->timestamps();
