@@ -22,7 +22,7 @@
 
 
               <li class="nav-item">
-                  <a class="nav-link text-white active bg-gradient-primary" href="/dashboard">
+                  <a class="nav-link text-white {{ Request::is('dashboard')? 'active bg-gradient-primary': ''; }}" href="/dashboard">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">dashboard</i>
                       </div>
@@ -32,7 +32,7 @@
 
 
               <li class="nav-item">
-                  <a class="nav-link text-white " href="/addMember">
+                  <a class="nav-link text-white {{ Request::is('addMember')? 'active bg-gradient-primary': ''; }}" href="/addMember">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">personadd</i>
                       </div>
@@ -43,7 +43,7 @@
 
 
               <li class="nav-item">
-                  <a class="nav-link text-white " href="/memberTable">
+                  <a class="nav-link text-white {{ Request::is('memberTable')? 'active bg-gradient-primary': ''; }}" href="/memberTable">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">table_view</i>
                       </div>
@@ -55,7 +55,7 @@
 
 
               <li class="nav-item">
-                  <a class="nav-link text-white " href="/billing">
+                  <a class="nav-link text-white {{ Request::is('billing')? 'active bg-gradient-primary': ''; }}" href="/billing">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">paid</i>
                       </div>
@@ -67,7 +67,7 @@
 
 
               <li class="nav-item">
-                  <a class="nav-link text-white " href="/buildingCourse">
+                  <a class="nav-link text-white {{ Request::is('buildingCourse')? 'active bg-gradient-primary': ''; }}" href="/buildingCourse">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">fitness_center</i>
                       </div>
@@ -77,7 +77,7 @@
 
 
               <li class="nav-item">
-                  <a class="nav-link text-white " href="/mealCourse">
+                  <a class="nav-link text-white {{ Request::is('mealCourse')? 'active bg-gradient-primary': ''; }}" href="/mealCourse">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">fastfood</i>
                       </div>
@@ -86,7 +86,7 @@
               </li>
 
               <li class="nav-item">
-                  <a class="nav-link text-white " href="/calCalculator">
+                  <a class="nav-link text-white {{ Request::is('calCalculator')? 'active bg-gradient-primary': ''; }}" href="/calCalculator">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">calculate</i>
                       </div>
@@ -108,7 +108,7 @@
 
 
               <li class="nav-item">
-                  <a class="nav-link text-white " href="/profile">
+                  <a class="nav-link text-white {{ Request::is('profile')? 'active bg-gradient-primary': ''; }}" href="/profile">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">person</i>
                       </div>
