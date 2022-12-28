@@ -35,4 +35,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/mealCourse', [App\Http\Controllers\PageController::class, 'mealCourse']);
     Route::get('/calCalculator', [App\Http\Controllers\PageController::class, 'calCalculator']);
     Route::get('/profile', [App\Http\Controllers\PageController::class, 'profile']);
+
+    // edit user button
+    Route::get('/edit-member/{id}', [App\Http\Controllers\PageController::class,'editMember']);
+    Route::put('/update-member/{id}', [App\Http\Controllers\PageController::class,'updateFunction']);
 });
