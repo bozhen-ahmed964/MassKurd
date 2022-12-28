@@ -43,7 +43,7 @@
                             <td>{{ $item->updated_at }}</td>
                             <td>
                                 <a href="{{ url('edit-member/'.$item->id) }}" class="btn btn-dark">Edit</a>
-                                <button class="btn btn-primary">Delete</button>
+                                <a href="{{ url('delete-member/'.$item->id) }}" class="btn btn-primary">Delete</a>
                             </td>
                         </tr>
                     @endforeach

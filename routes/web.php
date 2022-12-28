@@ -39,4 +39,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     // edit user button
     Route::get('/edit-member/{id}', [App\Http\Controllers\PageController::class,'editMember']);
     Route::put('/update-member/{id}', [App\Http\Controllers\PageController::class,'updateFunction']);
+
+    // delete button
+    Route::get('/delete-member/{id}',[App\Http\Controllers\PageController::class,'destroy']);
 });

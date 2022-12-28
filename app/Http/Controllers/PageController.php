@@ -58,6 +58,12 @@ class PageController extends Controller
         $member->update();
         return redirect('memberTable')->with('status', "Member Updated Successfully");
     }
+    // delete member button
+    public function destroy($id){
+        $member = memberModel::find($id);
+        $member->delete();
+        return redirect('memberTable')->with('status','Member Deleted Successfully');
+    }
 
 
 
