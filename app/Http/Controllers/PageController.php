@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-
+    // route to dashboard page
     public function index()
     {
         return view('admin.index');
     }
-
+    // route to addMember page
     public function addMember()
     {
         return view('admin.addMember');
@@ -69,27 +69,27 @@ class PageController extends Controller
 
 
 
-
+    // route to balling page
     public function billing()
     {
         return view('admin.billing');
     }
-
+    // route to buildingCourse page
     public function buildingCourse()
     {
         return view('admin.buildingCourse');
     }
-
+    // route to mealCourse page
     public function mealCourse()
     {
         return view('admin.mealCourse');
     }
-
+    // route to calCalculator page
     public function calCalculator()
     {
         return view('admin.calCalculator');
     }
-
+    // route to profile page
     public function profile()
     {
         return view('admin.profile');
