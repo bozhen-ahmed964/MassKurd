@@ -9,90 +9,13 @@
                 <h2>Member Profile</h2>
             </div>
 
-            {{-- <div class="row mt-4">
-                <div class="col-lg-4 col-md-6 mt-4 mb-4 ">
-                    <div class="card z-index-2 ">
-                        <div class="card-body">
-                            <div class="card-header">
-                                <h4>Personal Info</h4>
-                            </div>
-                            <h6 class="mb-0 text-xlg">Full Name</h6>
-                            <p class="text-lg ">bozhen ahmed</p>
-
-                            <h6 class="mb-0 text-lg">Age</h6>
-                            <p class="text-lg ">22</p>
-
-                            <h6 class="mb-0 text-lg">Gender</h6>
-                            <p class="text-lg ">Male</p>
-
-                            <h6 class="mb-0 text-lg">Phone Number</h6>
-                            <p class="text-lg">07729968061</p>
-
-                            <hr class="dark horizontal">
-                            <a href="#" class="btn btn-primary btn-lg">Edit Information</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4 col-md-6 mt-4 mb-4">
-                    <div class="card z-index-2  ">
-                        <div class="card-body">
-                            <div class="card-header">
-                                <h4>Training Course</h4>
-                            </div>
-                            <h6 class="mb-0 text-xlg">Full Name</h6>
-                            <p class="text-lg ">bozhen ahmed</p>
-
-                            <h6 class="mb-0 text-lg">Age</h6>
-                            <p class="text-lg ">22</p>
-
-                            <h6 class="mb-0 text-lg">Gender</h6>
-                            <p class="text-lg ">Male</p>
-
-                            <h6 class="mb-0 text-lg">Phone Number</h6>
-                            <p class="text-lg">07729968061</p>
-
-                            <hr class="dark horizontal">
-                            <a href="#" class="btn btn-primary btn-lg">Edit Training</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 mt-4 mb-4">
-                    <div class="card z-index-2  ">
-                        <div class="card-body">
-                            <div class="card-header">
-                                <h4>Meal Course</h4>
-                            </div>
-                            <h6 class="mb-0 text-xlg">Full Name</h6>
-                            <p class="text-lg ">bozhen ahmed</p>
-
-                            <h6 class="mb-0 text-lg">Age</h6>
-                            <p class="text-lg ">22</p>
-
-                            <h6 class="mb-0 text-lg">Gender</h6>
-                            <p class="text-lg ">Male</p>
-
-                            <h6 class="mb-0 text-lg">Phone Number</h6>
-                            <p class="text-lg">07729968061</p>
-
-                            <hr class="dark horizontal">
-                            <a href="#" class="btn btn-primary btn-lg">Edit Meal</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-
-
         <div class="container-fluid px-2 px-md-4">
       <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
         <span class="mask  bg-gradient-dark  opacity-6"></span>
       </div>
 
+
+{{-- information section --}}
       <div class="card card-body mx-3 mx-md-4 mt-n6">
         <div class="row gx-4 mb-2">
 
@@ -140,7 +63,7 @@
               </div>
             </div>
             {{-- 3 --}}
-            <div class="col-4 col-xl-2">
+            <div class="col-4 col-xl-3">
               <div class="card card-plain h-100">
                 <div class="card-body p-3">
                   <hr class="horizontal gray-light my-4">
@@ -153,26 +76,33 @@
                 </div>
               </div>
             </div>
+
             {{-- 4 --}}
             <div class="col-4 col-xl-2">
               <div class="card card-plain h-100">
                 <div class="card-body p-3">
                   <hr class="horizontal gray-light my-4">
-                  <ul class="list-group">
-                    <li class="list-group-item border-0 ps-0 pt-0"><button class="btn btn-dark btn-lg">Print</button></li>
-                    <li class="list-group-item border-0 ps-0 pt-0"><button class="btn btn-warning btn-lg">Edit Info</button></li>
+                    {{-- buttons --}}
+                  <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-dark btn-lg">Get Course</button>
+                        <button class="btn btn-primary btn-lg">Get Info</button>
+                    </div>
+                     <div class="col-6">
+                        <button class="btn btn-dark btn-lg">Get Meal</button>
+                        <button class="btn btn-primary btn-lg">Get Print</button>
+                    </div>
+                  </div>
 
-                  </ul>
                 </div>
               </div>
             </div>
-
         </div>
       </div>
     </div>
 
 
-
+{{-- table section --}}
  <div class="card card-body mx-3 mx-md-4 mt-6">
 
         <div class="row">
