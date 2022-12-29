@@ -33,7 +33,7 @@
     <div class="g-sidenav-show  bg-gray-200">
         @include('layouts.include.sidebar')
 
-        <div class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <div class="main-content position-relative max-height-vh-100 h-100 border-radius-lg mt-4">
          @include('layouts.include.navbar')
             <div class="content">
                 @yield('content')
