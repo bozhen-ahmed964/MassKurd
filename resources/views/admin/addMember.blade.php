@@ -5,7 +5,7 @@
 @section('content')
     <div class="card bg-dark">
         <div class="card-header bg-dark">
-            <h4 style="color: white">Add Member +</h4>
+            <h4 style="color: white">Add Member </h4>
         </div>
         <div class="card-body">
             <form method="post" action="{{ url('insertMember') }}">
