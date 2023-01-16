@@ -32,7 +32,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/memberTable', [App\Http\Controllers\PageController::class, 'memberTable']);
     Route::get('/billing', [App\Http\Controllers\PageController::class, 'billing']);
     Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
-    Route::get('/mealCourse', [App\Http\Controllers\PageController::class, 'mealCourse']);
     Route::get('/calCalculator', [App\Http\Controllers\PageController::class, 'calCalculator']);
     Route::get('/profile', [App\Http\Controllers\PageController::class, 'profile']);
 

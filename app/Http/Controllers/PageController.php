@@ -79,11 +79,6 @@ class PageController extends Controller
     {
         return view('admin.buildingCourse');
     }
-    // route to mealCourse page
-    public function mealCourse()
-    {
-        return view('admin.mealCourse');
-    }
     // route to calCalculator page
     public function calCalculator()
     {
