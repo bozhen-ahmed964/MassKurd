@@ -85,8 +85,9 @@ class PageController extends Controller
         return view('admin.calCalculator');
     }
     // route to profile page
-    public function profile()
+    public function profile($id)
     {
-        return view('admin.profile');
+        $profileData = memberModel::find($id);
+        return view('admin.profile',compact('profileData'));
     }
 }

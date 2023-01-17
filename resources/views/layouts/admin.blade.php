@@ -12,14 +12,13 @@
 
     <!-- Style -->
     <link href="{{ asset('frontend/css/material-dashboard.css') }}" rel="stylesheet">
-    
+    <link href="{{ asset('/public/admin/css/material-dashboard.min.css') }}" rel="stylesheet">
+
+
 
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-    <!-- Nucleo Icons -->
-    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
@@ -27,6 +26,12 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="admin/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
 </head>
+
+
+
+
+
+
 
 <body>
 
@@ -49,11 +54,12 @@
 
 
     <!-- Scripts -->
-    <script src="{{ asset('admin/js/jquery.min.js') }}" defer></script>
-    <script src="{{ asset('admin/js/smooth-scrollbar.min.js') }}" defer></script>
-    <script src="{{ asset('admin/js/popper.min.js') }}" defer></script>
-    <script src="{{ asset('admin/js/perfect-scrollbar.min.js') }}" defer></script>
-    <script src="{{ asset('admin/js/smooth-scrollbar.min.js') }}" defer></script>
+    <script src="{{ asset('/public/admin/js/bootstrap.bundle.min.js') }}" defer></script>
+    <script src="{{ asset('/public/admin/js/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('/public/admin/js/material-dashboard.js') }}" defer></script>
+    <script src="{{ asset('/public/admin/js/material-dashboard.js.map') }}" defer></script>
+    <script src="{{ asset('/public/admin/js/material-dashboard.min.js') }}" defer></script>
+
 
 
     @yield('scirpt')

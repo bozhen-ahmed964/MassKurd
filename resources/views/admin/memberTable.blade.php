@@ -51,6 +51,7 @@ tr:nth-child(odd) {
                             <td>{{ $item->created_at }}</td>
                             <td>{{ $item->updated_at }}</td>
                             <td>
+                                <a href="{{ url('profile/{id}') }}" class="btn btn-dark">Info</a>
                                 <a href="{{ url('edit-member/'.$item->id) }}" class="btn btn-dark">Edit</a>
                                 <a href="{{ url('delete-member/'.$item->id) }}" class="btn btn-primary">Delete</a>
                             </td>

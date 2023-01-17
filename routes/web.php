@@ -33,7 +33,10 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/billing', [App\Http\Controllers\PageController::class, 'billing']);
     Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
     Route::get('/calCalculator', [App\Http\Controllers\PageController::class, 'calCalculator']);
-    Route::get('/profile', [App\Http\Controllers\PageController::class, 'profile']);
+
+    // profile routes
+    Route::get('/profile/{id}', [App\Http\Controllers\PageController::class, 'profile']);
+
 
     // edit user button
     Route::get('/edit-member/{id}', [App\Http\Controllers\PageController::class,'editMember']);
