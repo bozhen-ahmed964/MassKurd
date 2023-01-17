@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 
 
@@ -81,8 +81,8 @@
                 <br>
 
                 <button class="btn btn-success" type="submit"
-                    style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Add New Member
-                    +
+                    style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Update Information
+                    
                 </button>
             </form>
         </div>
