@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Style -->
-    <link href="{{ asset('frontend/css/material-dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('/frontend/css/material-dashboard.css') }}" rel="stylesheet">
     <link href="{{ asset('/public/admin/css/material-dashboard.min.css') }}" rel="stylesheet">
 
 
@@ -24,7 +24,7 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
-    <link id="pagestyle" href="admin/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+    <link id="pagestyle" href="/admin/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
 </head>
 
 

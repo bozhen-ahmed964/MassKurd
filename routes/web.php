@@ -35,7 +35,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/calCalculator', [App\Http\Controllers\PageController::class, 'calCalculator']);
 
     // profile routes
-    Route::get('/profile/{id}', [App\Http\Controllers\PageController::class, 'profile']);
+    Route::get('memberTable/profile/{id}', [App\Http\Controllers\PageController::class, 'profile']);
 
 
     // edit user button

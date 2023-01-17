@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 
 
-
 @section('content')
 <style>
 /* customize the color for odd rows */
