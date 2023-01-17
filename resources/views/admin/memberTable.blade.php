@@ -3,6 +3,15 @@
 
 
 @section('content')
+<style>
+/* customize the color for odd rows */
+    tr:nth-child(even) {
+  background-color: #4949498b;
+}
+tr:nth-child(odd) {
+  background-color: #cecece8a;
+}
+</style>
     <div class="card">
         <div class="card-body">
             <h3>Member Table</h3>

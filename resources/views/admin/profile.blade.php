@@ -3,6 +3,15 @@
 
 
 @section('content')
+<style>
+/* customize the color for odd rows */
+    tr:nth-child(even) {
+  background-color: #4949498b;
+}
+tr:nth-child(odd) {
+  background-color: #cecece8a;
+}
+</style>
     <div class="card">
         <div class="card-body">
             <div class="card-header">
@@ -11,7 +20,7 @@
 
             <div class="container-fluid px-2 px-md-4">
                 <div class="page-header min-height-300 border-radius-xl mt-4"
-                    style="background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                    style="background-image: url('https://images.unsplash.com/photo-1637666218229-1fe0a9419267?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');">
                     <span class="mask  bg-gradient-dark  opacity-6"></span>
                 </div>
 

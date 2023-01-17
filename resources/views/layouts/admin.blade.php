@@ -12,7 +12,7 @@
 
     <!-- Style -->
     <link href="{{ asset('frontend/css/material-dashboard.css') }}" rel="stylesheet">
-
+    
 
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -51,7 +51,6 @@
     <!-- Scripts -->
     <script src="{{ asset('admin/js/jquery.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/smooth-scrollbar.min.js') }}" defer></script>
-    <script src="{{ asset('admin/js/chartjs.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/popper.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/perfect-scrollbar.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/smooth-scrollbar.min.js') }}" defer></script>
