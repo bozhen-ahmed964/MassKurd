@@ -65,10 +65,6 @@ class PageController extends Controller
         return redirect('memberTable')->with('status','Member Deleted Successfully');
     }
 
-
-
-
-
     // route to balling page
     public function billing()
     {
