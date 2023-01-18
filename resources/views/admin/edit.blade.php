@@ -4,9 +4,10 @@
 
 @section('content')
     <div class="card bg-dark">
-        <div class="card-header bg-dark">
-            <h4 style="color: white">Edit Member +</h4>
-        </div>
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3 my-4">
+                    <h3 class="text-white text-capitalize ps-3 ">Update Member Informations</h3>
+                </div>
         <div class="card-body">
             <form method="post" action="{{ url('update-member/'.$member->id) }}">
                 @csrf
@@ -82,7 +83,7 @@
 
                 <button class="btn btn-success" type="submit"
                     style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Update Information
-                    
+
                 </button>
             </form>
         </div>

@@ -11,7 +11,7 @@
                 <h3 class="text-white text-capitalize ps-3 ">Members Table</h3>
               </div>
             </div>
-            <table class="table table-bordered align-items-center">
+            <table class="table table-bordered shadow-dark align-items-center">
                 <thead style="font-size:18px;background-color:#494949d5;color:white;">
                     <tr>
                         <th>ID</th>

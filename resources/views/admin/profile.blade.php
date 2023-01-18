@@ -13,10 +13,11 @@
         }
     </style>
     <div class="card">
-        <div class="card-body">
-            <div class="card-header">
-                <h2>Member Profile</h2>
-            </div>
+        <div class="card-body shadow-dark">
+           <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3 my-4">
+                    <h3 class="text-white text-capitalize ps-3 ">Member Profile</h3>
+                </div>
 
             <div class="container-fluid px-2 px-md-4">
                 <div class="page-header min-height-300 border-radius-xl mt-4"
@@ -28,7 +29,7 @@
 
 
                 {{-- information section --}}
-                <div class="card card-body mx-3 mx-md-4 mt-n6">
+                <div class="card card-body shadow-dark mx-3 mx-md-4 mt-n6">
                     <div class="row gx-4 mb-2">
                         <div class="col-auto my-auto">
                             <div class="h-100">
@@ -120,7 +121,7 @@
 
 
                 {{-- table section --}}
-                <div class="card card-body mx-3 mx-md-4 mt-6">
+                <div class="card card-body shadow-dark mx-3 mx-md-4 mt-6">
 
                     <div class="row">
                         <div class="row">
