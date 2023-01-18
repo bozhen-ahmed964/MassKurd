@@ -20,7 +20,6 @@ class memberModel extends Model
         'Game_Type',
         'Pay',
         'Statues',
-        'Health_Issue',
         'created_at',
         'updated_at',
     ];

@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('Game_Type');
             $table->string('Pay');
             $table->tinyInteger('Statues')->default('0');
-            $table->longText('Health_Issue');
             $table->timestamps();
         });
 

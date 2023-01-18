@@ -77,8 +77,6 @@
                                                         class="text-dark">Height:</strong> &nbsp; {{ $profileData->Height }}Cm</li>
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">Game Type:</strong> &nbsp; {{ $profileData->Game_Type }}</li>
-                                                <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
-                                                        class="text-dark">Health Issue:</strong> &nbsp; {{ $profileData->Health_Issue }}</li>
                                             </ul>
                                         </div>
                                     </div>
