@@ -28,7 +28,6 @@ class PageController extends Controller
        $member->Height = $request->input('Height');
        $member->Game_Type = $request->input('Game_Type');
        $member->Pay = $request->input('Pay');
-       $member->Health_Issue = $request->input('Health_Issue');
        $member->save();
        return redirect('/addMember')->with('success', 'Member Added Successfully');
     }
@@ -54,7 +53,6 @@ class PageController extends Controller
         $member->Height = $request->input('Height');
         $member->Game_Type = $request->input('Game_Type');
         $member->Pay = $request->input('Pay');
-        $member->Health_Issue = $request->input('Health_Issue');
         $member->update();
         return redirect('memberTable')->with('status', "Member Updated Successfully");
     }
