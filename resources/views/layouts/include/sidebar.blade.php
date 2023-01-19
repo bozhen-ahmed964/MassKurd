@@ -77,7 +77,7 @@
 
 
               <li class="nav-item">
-                  <a class="nav-link text-white {{ Request::is('Calculator')? 'active bg-gradient-primary': ''; }}" href="/calCalculator">
+                  <a class="nav-link text-white {{ Request::is('Calculator')? 'active bg-gradient-primary': ''; }}" href="/Calculator">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">calculate</i>
                       </div>

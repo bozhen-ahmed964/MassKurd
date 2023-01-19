@@ -126,6 +126,18 @@ class PageController extends Controller
     {
         return view('admin.Calculator');
     }
+    // cal calculater
+   public function calCalculator(Request $request){
+        $weight = $request->input('weight');
+        $height = $request->input('height');
+        $age = $request->input('age');
+        $activity = $request->input('activity');
+
+        // Perform calculations using the Harris-Benedict Equation
+        $bmr = 66 + (13.7 * $weight) + (5 * $height) - (6.8 * $age);
+        $result = $bmr * $activity;
+        return view('admin.Calculator', ['result' => $result]);
+   }
 
 
 
