@@ -15,18 +15,18 @@
                <div class="row">
                     <div class="col-3">
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Full Name :&nbsp;
-                            <input class="form-control shadow-dark form-outline" type="text" value="{{ $member->Full_Name }}"
-                                style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:18px"
+                            <input class="form-control form-control-lg shadow-dark form-outline" type="text" value="{{ $member->Full_Name }}"
+                                style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="Full_Name" required="">
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Age :&nbsp;<br>
-                            <input class="form-control shadow-dark" type="text" value="{{ $member->Age }}"
-                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:18px"
+                            <input class="form-control form-control-lg shadow-dark" type="text" value="{{ $member->Age }}"
+                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="Age" required="">
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Gender :&nbsp;<br>
-                            <input class="form-control shadow-dark" type="text" value="{{ $member->Gender }}"
-                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:18px"
+                            <input class="form-control form-control-lg shadow-dark" type="text" value="{{ $member->Gender }}"
+                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="Gender" required="">
                         </label>
                     </div>
@@ -34,37 +34,37 @@
                     <div class="col-3">
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Phone
                             Number:&nbsp;<br>
-                            <input class="form-control shadow-dark" type="text" value="{{ $member->Phone_Number }}"
-                                style="width: 310px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:18px"
+                            <input class="form-control form-control-lg shadow-dark" type="text" value="{{ $member->Phone_Number }}"
+                                style="width: 310px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="Phone_Number" required="">
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);">Wight :&nbsp;<br>
-                            <input class="form-control shadow-dark" type="text" value="{{ $member->Weight }}"
-                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:18px"
+                            <input class="form-control form-control-lg shadow-dark" type="text" value="{{ $member->Weight }}"
+                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="Weight" required="">
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Height
                             :&nbsp;<br>
-                            <input class="form-control shadow-dark" type="text" value="{{ $member->Height }}"
-                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:18px"
+                            <input class="form-control form-control-lg shadow-dark" type="text" value="{{ $member->Height }}"
+                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="Height" required="">
                         </label>
                     </div>
 
                     <div class="col-3">
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Game Type :<br>
-                            <input class="form-control shadow-dark" type="text" value="{{ $member->Game_Type }}"
-                                style="width: 310px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);rgb(0, 0, 0);font-size:18px"
+                            <input class="form-control form-control-lg shadow-dark" type="text" value="{{ $member->Game_Type }}"
+                                style="width: 310px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);rgb(0, 0, 0);font-size:22px"
                                 name="Game_Type" required="">
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Pay :<br>
-                            <input class="form-control shadow-dark" type="text" value="{{ $member->Pay }}"
-                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:18px"
+                            <input class="form-control form-control-lg shadow-dark" type="text" value="{{ $member->Pay }}"
+                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="Pay" required="">
                         </label>
                     </div>
                 </div>
-                <button class="btn btn-success" type="submit"
+                <button class="btn btn-success btn-lg" type="submit"
                     style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Update Information
                 </button>
             </form>
