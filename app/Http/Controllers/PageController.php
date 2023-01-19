@@ -12,6 +12,13 @@ class PageController extends Controller
     {
         return view('admin.index');
     }
+
+
+
+
+
+
+    // anything that deal with table
     // route to addMember page
     public function addMember()
     {
@@ -63,21 +70,68 @@ class PageController extends Controller
         return redirect('memberTable')->with('status','Member Deleted Successfully');
     }
 
+    // sort buttons
+    // Sort by Name
+    public function sortName(){
+        $memberTable = memberModel::orderBy('Full_Name')->get();
+        return view('admin.memberTable', compact('memberTable'));
+    }
+    // Sort by Gender
+    public function sortGender(){
+        $memberTable = memberModel::orderBy('Gender')->get();
+        return view('admin.memberTable', compact('memberTable'));
+    }
+    // Sort by Statue
+    public function sortStatus(){
+        $memberTable = memberModel::orderBy('Statues')->get();
+        return view('admin.memberTable', compact('memberTable'));
+    }
+
+
+
+
+
+
+
+
+
+
+
     // route to balling page
     public function billing()
     {
         return view('admin.billing');
     }
+
+
+
+
+
+
+
     // route to buildingCourse page
     public function buildingCourse()
     {
         return view('admin.buildingCourse');
     }
+
+
+
+
+
+
+
     // route to calCalculator page
     public function calCalculator()
     {
         return view('admin.calCalculator');
     }
+
+
+
+
+
+
     // route to profile page
     public function profile($id)
     {
