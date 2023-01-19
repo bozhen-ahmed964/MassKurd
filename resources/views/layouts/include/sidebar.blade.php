@@ -77,11 +77,11 @@
 
 
               <li class="nav-item">
-                  <a class="nav-link text-white {{ Request::is('calCalculator')? 'active bg-gradient-primary': ''; }}" href="/calCalculator">
+                  <a class="nav-link text-white {{ Request::is('Calculator')? 'active bg-gradient-primary': ''; }}" href="/calCalculator">
                       <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                           <i class="material-icons opacity-10">calculate</i>
                       </div>
-                      <span class="nav-link-text ms-1">CAL Calculator</span>
+                      <span class="nav-link-text ms-1">Calculator</span>
                   </a>
               </li>
 
@@ -98,7 +98,7 @@
 
 
 
-             
+
 
 
 

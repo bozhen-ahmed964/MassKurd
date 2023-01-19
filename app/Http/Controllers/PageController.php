@@ -122,9 +122,9 @@ class PageController extends Controller
 
 
     // route to calCalculator page
-    public function calCalculator()
+    public function Calculator()
     {
-        return view('admin.calCalculator');
+        return view('admin.Calculator');
     }
 
 
