@@ -10,6 +10,57 @@
                     <h3 class="text-white text-capitalize ps-3 ">Calculator</h3>
                 </div>
             </div>
+            <div class="row my-5">
+                {{-- Calorie --}}
+                <div class="col-4">
+                    <div class="card-body shadow-dark">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-success shadow-success border-radius-lg pt-4 pb-3 my-4">
+                                <h3 class="text-white text-center text-capitalize ps-3 ">CALORIES</h3>
+                            </div>
+                        </div>
+                        <table class="table shadow-dark ">
+                            <thead>
+                                <tr>
+                                    <th>head1</th>
+                                    <th>head2</th>
+                                    <th>head2</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                    <td>body3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                {{-- Protine --}}
+                <div class="col-4">
+                    <div class="card-body shadow-dark">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3 my-4">
+                                <h3 class="text-white text-center text-capitalize ps-3 ">PROTINE</h3>
+                            </div>
+                        </div>
+                        {{-- code here --}}
+                    </div>
+                </div>
+                {{-- CARBOHYDRATES --}}
+                <div class="col-4">
+                    <div class="card-body shadow-dark">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-warning shadow-warning border-radius-lg pt-4 pb-3 my-4">
+                                <h3 class="text-white text-center text-capitalize ps-3 ">CARBOHYDRATES</h3>
+                            </div>
+                        </div>
+                        {{-- code here --}}
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-4">
                     {{-- calc input --}}
@@ -86,7 +137,6 @@
                             CAL = BMR * Activity</h3>
                     </div>
                 </div>
-                <div class="card-body shadow-dark"></div>
             </div>
 
         </div>
