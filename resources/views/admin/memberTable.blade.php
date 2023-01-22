@@ -42,7 +42,7 @@
                             <td>{{ $item->Pay }}</td>
                             <td>{{ $item->created_at }}</td>
                             <td>{{ $item->updated_at }}</td>
-                            <td><button class="btn btn-success btn-sm">{{ $item->Statues }}Active</button></td>
+                            <td><button class="btn btn-success btn-sm">{{ $item->Statues }}</button></td>
                             <td>
                                 <a href="{{ url('memberTable/profile/' . $item->id) }}"
                                     class="btn btn-dark btn-lg">Info</a>

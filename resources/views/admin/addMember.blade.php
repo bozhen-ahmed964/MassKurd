@@ -63,6 +63,11 @@
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="Pay" required="">
                         </label>
+                        <label class="form-label" style="color:rgb(0, 0, 0);"> End Date :<br>
+                            <input class="form-control form-control-lg shadow-dark" type="date"
+                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                                name="end_at" required="">
+                        </label>
                     </div>
                 </div>
 

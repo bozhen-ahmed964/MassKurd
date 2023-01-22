@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('Height');
             $table->string('Game_Type');
             $table->string('Pay');
-            $table->tinyInteger('Statues')->default('0');
+            $table->string('Statues')->default('active');
             $table->timestamps();
         });
 

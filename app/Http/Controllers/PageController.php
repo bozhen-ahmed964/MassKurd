@@ -15,9 +15,6 @@ class PageController extends Controller
 
 
 
-
-
-
     // anything that deal with table
     // route to addMember page
     public function addMember()
@@ -35,6 +32,7 @@ class PageController extends Controller
        $member->Height = $request->input('Height');
        $member->Game_Type = $request->input('Game_Type');
        $member->Pay = $request->input('Pay');
+       $member->updated_at = $request->input('end_at');
        $member->save();
        return redirect('/addMember')->with('success', 'Member Added Successfully');
     }
@@ -60,6 +58,7 @@ class PageController extends Controller
         $member->Height = $request->input('Height');
         $member->Game_Type = $request->input('Game_Type');
         $member->Pay = $request->input('Pay');
+        $member->updated_at = $request->input('end_at');
         $member->update();
         return redirect('memberTable')->with('status', "Member Updated Successfully");
     }
@@ -86,6 +85,7 @@ class PageController extends Controller
         $memberTable = memberModel::orderBy('Statues')->get();
         return view('admin.memberTable', compact('memberTable'));
     }
+
 
 
 
