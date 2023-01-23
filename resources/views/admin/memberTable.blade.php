@@ -13,9 +13,9 @@
             <div class="row my-2">
                 <h3>Sort By : </h3>
                 <div class="col-3">
-                    <a href="{{ url('/memberTable/sort_By_Name') }}" class="btn btn-success btn-lg">Name</a>
-                    <a href="{{ url('/memberTable/sort_By_Gender') }}" class="btn btn-success btn-lg mx-2">Gender</a>
-                    <a href="{{ url('/memberTable/sort_By_Status') }}" class="btn btn-success btn-lg mx-2">Status</a>
+                    <a href="{{ url('/memberTable/sort_By_Name') }}" class="btn btn-warning btn-lg">Name</a>
+                    <a href="{{ url('/memberTable/sort_By_Gender') }}" class="btn btn-warning btn-lg mx-2">Gender</a>
+                    <a href="{{ url('/memberTable/sort_By_Status') }}" class="btn btn-warning btn-lg mx-2">Status</a>
                 </div>
             </div>
             <table class="table table-bordered shadow-dark align-items-center">

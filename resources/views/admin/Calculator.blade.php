@@ -3,6 +3,7 @@
 
 
 @section('content')
+    {{-- INFORMATION CARD --}}
     <div class="card">
         <div class="card-body">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -19,20 +20,29 @@
                                 <h3 class="text-white text-center text-capitalize ps-3 ">CALORIES</h3>
                             </div>
                         </div>
-                        <table class="table shadow-dark ">
+                        <table class="table table-striped shadow-success " style="font-size: 18px; color:black;">
                             <thead>
                                 <tr>
-                                    <th>head1</th>
-                                    <th>head2</th>
-                                    <th>head2</th>
-
+                                    <th>Food</th>
+                                    <th>Calories</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>body1</td>
                                     <td>body2</td>
-                                    <td>body3</td>
+                                </tr>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -47,6 +57,32 @@
                             </div>
                         </div>
                         {{-- code here --}}
+                        <table class="table table-striped shadow-primary " style="font-size: 18px; color:black;">
+                            <thead>
+                                <tr>
+                                    <th>Food</th>
+                                    <th>Calories</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 {{-- CARBOHYDRATES --}}
@@ -58,11 +94,42 @@
                             </div>
                         </div>
                         {{-- code here --}}
+                        <table class="table table-striped shadow-warning " style="font-size: 18px; color:black;">
+                            <thead>
+                                <tr>
+                                    <th>Food</th>
+                                    <th>Calories</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                                <tr>
+                                    <td>body1</td>
+                                    <td>body2</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    {{-- CAL CALCULATOR CARD --}}
+    <div class="card my-4">
+        <div class="card-body">
             <div class="row">
-                <div class="col-4">
+                <div class="col-3">
                     {{-- calc input --}}
                     <div class="card-body">
                         <h3>Calories Calculator </h3>
@@ -101,11 +168,11 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-6">
-                    {{-- calc input --}}
+                <div class="col-9">
+                    {{-- calc output --}}
                     <div class="card-body shadow-dark">
                         <h3>CAL Calculator</h3>
-                        <h1>result here</h1>
+                        <h1>$result here</h1>
                         <ul>
                             <h4>Activity Level</h4>
                             <li>
@@ -138,6 +205,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
+    
     @endsection
