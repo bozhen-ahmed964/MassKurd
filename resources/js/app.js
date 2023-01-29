@@ -1,6 +1,11 @@
 import './bootstrap';
+import Vue from 'vue';
+import ExampleComponent from './components/ExampleComponent.vue';
 
-import {createApp} from 'vue';
-import app from './component/app.vue';
 
-createApp(app).mount('#app');
+const app = new Vue({
+    el: '#app',
+    components: {
+        ExampleComponent
+    }
+});
