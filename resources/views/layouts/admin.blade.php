@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="/admin/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+    @vite('resources/css/app.css')
 </head>
 
 
@@ -39,7 +40,7 @@
         @include('layouts.include.sidebar')
 
         <div class="main-content position-relative max-height-vh-100 h-100 border-radius-lg mt-4">
-         @include('layouts.include.navbar')
+            @include('layouts.include.navbar')
             <div class="content">
                 @yield('content')
             </div>
@@ -59,6 +60,7 @@
     <script src="{{ asset('/public/admin/js/material-dashboard.js') }}" defer></script>
     <script src="{{ asset('/public/admin/js/material-dashboard.js.map') }}" defer></script>
     <script src="{{ asset('/public/admin/js/material-dashboard.min.js') }}" defer></script>
+    @vite('resources/js/app.js')
 
 
 

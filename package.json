@@ -6,12 +6,15 @@
     },
     "devDependencies": {
         "axios": "^0.27",
-        "laravel-vite-plugin": "^0.6.0",
+        "laravel-vite-plugin": "^0.6.1",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
-        "vite": "^3.0.0"
+        "vite": "^3.2.5"
     },
     "dependencies": {
-        "package": "^1.0.1"
+        "@vitejs/plugin-vue": "^4.0.0",
+        "package": "^1.0.1",
+        "vue": "^3.2.36",
+        "vue-loader": "^17.0.1"
     }
 }
