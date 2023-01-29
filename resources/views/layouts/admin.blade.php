@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="/admin/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
-    @vite('resources/css/app.css')
+
 </head>
 
 
@@ -60,7 +60,7 @@
     <script src="{{ asset('/public/admin/js/material-dashboard.js') }}" defer></script>
     <script src="{{ asset('/public/admin/js/material-dashboard.js.map') }}" defer></script>
     <script src="{{ asset('/public/admin/js/material-dashboard.min.js') }}" defer></script>
-    @vite('resources/js/app.js')
+
 
 
 
