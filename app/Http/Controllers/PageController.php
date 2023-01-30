@@ -150,4 +150,7 @@ class PageController extends Controller
         $profileData = memberModel::find($id);
         return view('admin.profile',compact('profileData'));
     }
+    public function findMe(){
+        return view('admin.findMe');
+    }
 }

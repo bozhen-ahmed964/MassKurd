@@ -30,6 +30,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/addMember', [App\Http\Controllers\PageController::class, 'addMember']);
     Route::get('/billing', [App\Http\Controllers\PageController::class, 'billing']);
     Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
+    Route::get('/findMe', [App\Http\Controllers\PageController::class, 'findMe']);
 
 
     Route::get('/Calculator', [App\Http\Controllers\PageController::class, 'Calculator']);
@@ -57,6 +58,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/memberTable/sort_By_Name', [\App\Http\Controllers\PageController::class, 'sortName']);
     Route::get('/memberTable/sort_By_Gender', [\App\Http\Controllers\PageController::class, 'sortGender']);
     Route::get('/memberTable/sort_By_Status', [\App\Http\Controllers\PageController::class, 'sortStatus']);
-    
+
 
 });
