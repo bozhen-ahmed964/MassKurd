@@ -80,11 +80,6 @@ class PageController extends Controller
         $memberTable = memberModel::orderBy('Gender')->get();
         return view('admin.memberTable', compact('memberTable'));
     }
-    // Sort by Statue
-    public function sortStatus(){
-        $memberTable = memberModel::orderBy('Statues')->get();
-        return view('admin.memberTable', compact('memberTable'));
-    }
 
 
 

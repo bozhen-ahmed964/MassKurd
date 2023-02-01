@@ -57,7 +57,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     // filter buttons
     Route::get('/memberTable/sort_By_Name', [\App\Http\Controllers\PageController::class, 'sortName']);
     Route::get('/memberTable/sort_By_Gender', [\App\Http\Controllers\PageController::class, 'sortGender']);
-    Route::get('/memberTable/sort_By_Status', [\App\Http\Controllers\PageController::class, 'sortStatus']);
+    
 
 
 });

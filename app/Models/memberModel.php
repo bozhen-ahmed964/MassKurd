@@ -19,7 +19,6 @@ class memberModel extends Model
         'Height',
         'Game_Type',
         'Pay',
-        'Statues',
         'created_at',
         'updated_at',
     ];

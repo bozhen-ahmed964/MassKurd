@@ -90,9 +90,6 @@
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">Pay:</strong> &nbsp; {{ $profileData->Pay }}IQD</li>
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
-                                                        class="text-dark">Status:</strong> &nbsp; <button
-                                                        class="btn btn-success btn-sm">{{ $profileData->Statues }}</button></li>
-                                                <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">Start Date:</strong> &nbsp; {{ $profileData->created_at }}</li>
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">End Date:</strong> &nbsp; {{ $profileData->updated_at }}</li>
