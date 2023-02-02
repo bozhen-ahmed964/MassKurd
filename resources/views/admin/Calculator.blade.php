@@ -128,84 +128,85 @@
     {{-- CAL CALCULATOR CARD --}}
     <div class="card my-4">
         <div class="card-body">
-            <div class="row">
-                <div class="col-3">
-                    {{-- calc input --}}
-                    <div class="card-body">
-                        <h3>Calories Calculator </h3>
-                        <form method="post" action="{{ route('Calculator') }}">
-                            @csrf
-                            <div class="form-group">
-                                <label style="font-size: 22px;">Weight (kg):</label>
-                                <input type="text" name="weight" class="form-control form-control-lg shadow-dark"
-                                    style="font-size: 22px;">
-                            </div> <br><br>
-                            <div class="form-group">
-                                <label style="font-size: 22px;">Height (cm):</label>
-                                <input type="text" name="height" class="form-control form-control-lg shadow-dark"
-                                    style="font-size: 22px;">
-                            </div><br><br>
-                            <div class="form-group">
-                                <label style="font-size: 22px;">Age:</label>
-                                <input type="text" name="age" class="form-control form-control-lg shadow-dark"
-                                    style="font-size: 22px;">
-                            </div><br><br>
-                            <div class="form-group">
-                                <label style="font-size: 22px;">Activity Level:</label>
-                                <select name="activity" class="form-control form-control-lg shadow-dark"
-                                    style="font-size: 22px;">
-                                    <option value="1.2">Sedentary (little or no exercise)</option>
-                                    <option value="1.375">Lightly Active (light exercise or sports 1-3 days a week)
-                                    </option>
-                                    <option value="1.55">Moderately Active (moderate exercise or sports 3-5 days a week)
-                                    </option>
-                                    <option value="1.725">Very Active (hard exercise or sports 6-7 days a week)</option>
-                                    <option value="1.9">Super Active (very hard exercise or sports and physical job or
-                                        training 2 times a day)</option>
-                                </select>
-                            </div><br><br>
-                            <button type="submit" class="btn btn-primary btn-lg">Calculate</button>
-                        </form>
-                    </div>
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 style="font-weight: bold;">
+                        <span style="color: rgb(64, 64, 64); background-color: transparent;">CALCULATE THE
+                            CALORIES BURNED BY
+                            HEART RATE</span>
+                    </h2>
                 </div>
-                <div class="col-9">
-                    {{-- calc output --}}
-                    <div class="card-body shadow-dark">
-                        <h3>CAL Calculator</h3>
-                        <h1>$result here</h1>
-                        <ul>
-                            <h4>Activity Level</h4>
-                            <li>
-                                Sedentary (little or no exercise) = <strong class="text-lg"
-                                    style="color: black;font-size:16px;">1.2</strong>
-                            </li>
-                            <li>
-                                Lightly Active (light exercise or sports 1-3 days a week) = <strong class="text-lg"
-                                    style="color: black;font-size:16px;">1.375</strong>
-                            </li>
-                            <li>
-                                Moderately Active (moderate exercise or sports 3-5 days a week) = <strong class="text-lg"
-                                    style="color: black;font-size:16px;">1.55</strong>
-                            </li>
-                            <li>
-                                Very Active (hard exercise or sports 6-7 days a week) = <strong class="text-lg"
-                                    style="color: black;font-size:16px;">1.725</strong>
-                            </li>
-                            <li>
-                                Super Active (very hard exercise or sports and physical job or
-                                training 2 times a day) = <strong class="text-lg"
-                                    style="color: black;font-size:16px;">1.9</strong>
-                            </li>
-                        </ul>
-                        <br>
-                        <br>
-                        <h4> Harris-Benedict Equation</h4>
-                        <h3> BMR = 66 + (13.7 * Weight) + (5 * Height) - (6.8 * Age)
-                            CAL = BMR * Activity</h3>
-                    </div>
+                <div class="text-center my-4">
+                    <form action="{{ url('/Calculator') }}" method="post">
+                        @csrf
+                        <label class="form-label" style="color:rgb(0, 0, 0);"> Gender :&nbsp;
+                            <input class="form-control form-control-lg shadow-dark form-outline" type="text"
+                                placeholder="Gender"
+                                style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                                name="gender" required="">
+                        </label>
+                        <label class="form-label" style="color:rgb(0, 0, 0);"> Age :&nbsp;
+                            <input class="form-control form-control-lg shadow-dark form-outline" type="text"
+                                placeholder="Age"
+                                style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                                name="age" required="">
+                        </label>
+                        <label class="form-label" style="color:rgb(0, 0, 0);"> Weight :&nbsp;
+                            <input class="form-control form-control-lg shadow-dark form-outline" type="text"
+                                placeholder="Weight"
+                                style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                                name="weight" required="">
+                        </label>
+                        <div class="col">
+                            <label class="form-label" style="color:rgb(0, 0, 0);"> Heart Rate :&nbsp;
+                                <input class="form-control form-control-lg shadow-dark form-outline" type="text"
+                                    placeholder="Heart Rate"
+                                    style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                                    name="weight" required="">
+                            </label>
+                            <label class="form-label" style="color:rgb(0, 0, 0);"> Duration :&nbsp;
+                                <input class="form-control form-control-lg shadow-dark form-outline" type="text"
+                                    placeholder="Duration (Minutes))"
+                                    style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                                    name="weight" required="">
+                            </label>
+                            <button class="btn btn-success btn-lg" type="submit"
+                                style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Calculate
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
+            <div class="text-center my-4">
+                <h3>Result Here</h3>
+            </div>
+            {{-- Info Table --}}
+            <table class="table my-6">
+                <thead style="font-size: 18px; color:black;">
+                    <tr>
+                        <th scope="col">30 Minutes of Exersice</th>
+                        <th scope="col">Fat Calorise Burned </th>
+                        <th scope="col">GLYCOGEN CALORIES
+                            BURNED</th>
+                        <th scope="col">TOTAL CALORIES
+                            BURNED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Low Intensity Group (50%)</td>
+                        <td>120</td>
+                        <td>80</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>Hight Intensity Group (75%)</td>
+                        <td>140</td>
+                        <td>260</td>
+                        <td>400</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    
-    @endsection
+@endsection
