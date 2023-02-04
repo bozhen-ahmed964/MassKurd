@@ -41,4 +41,38 @@
             </form>
         </div>
     </div>
+
+    <div class="card my-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Exercise Name</th>
+                            <th scope="col">Primary Muscle</th>
+                            <th scope="col">image</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($courses as $exercises)
+                            <tr>
+                                <td>{{ $exercises->Exercise_Name }}</td>
+                                <td>{{ $exercises->Primary_Muscle }}</td>
+                                <td><img src="{{ asset('images/' . $exercises->image) }}" alt="image"
+                                        style="width: 100px;height: 100px;"></td>
+                                <td>
+                                    <a href="{{ url('editExercise/' . $exercises->id) }}"
+                                        class="btn btn-success btn-sm">Edit</a>
+                                    <a href="{{ url('deleteExercise/' . $exercises->id) }}"
+                                        class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
 @endsection

@@ -105,7 +105,8 @@ class PageController extends Controller
     // route to buildingCourse page
     public function buildingCourse()
     {
-        return view('admin.buildingCourse');
+        $courses = courseModel::all();
+        return view('admin.buildingCourse', compact('courses'));
     }
     // insert new exercise
     public function insertExercise(Request $request)
@@ -117,6 +118,7 @@ class PageController extends Controller
         $exercise->save();
         return redirect('/buildingCourse')->with('success', 'Exercise Added Successfully');
     }
+
 
 
 

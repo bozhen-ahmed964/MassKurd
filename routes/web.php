@@ -62,6 +62,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     // anything that deals with billing table
     Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
     Route::post('/insertExercise', [App\Http\Controllers\PageController::class, 'insertExercise']);
-
+   
 
 });
