@@ -42,37 +42,29 @@
         </div>
     </div>
 
-    <div class="card my-4">
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Exercise Name</th>
-                            <th scope="col">Primary Muscle</th>
-                            <th scope="col">image</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($courses as $exercises)
-                            <tr>
-                                <td>{{ $exercises->Exercise_Name }}</td>
-                                <td>{{ $exercises->Primary_Muscle }}</td>
-                                <td><img src="{{ asset('images/' . $exercises->image) }}" alt="image"
-                                        style="width: 100px;height: 100px;"></td>
-                                <td>
-                                    <a href="{{ url('editExercise/' . $exercises->id) }}"
-                                        class="btn btn-success btn-sm">Edit</a>
-                                    <a href="{{ url('deleteExercise/' . $exercises->id) }}"
-                                        class="btn btn-danger btn-sm">Delete</a>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
 
+    <div class="card">
+        <div class="card-body">
+            <div class="container py-4 py-xl-5">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    @foreach ($courses as $exercises)
+                        <div class="col">
+                            <div><img src="{{ asset('images/' . $exercises->image) }}"
+                                    class="rounded img-fluid border-3 border-primary shadow d-block w-100 fit-cover"
+                                    style="height: 360px;width: 360px;background: center / cover no-repeat;" />
+                                <div class="py-4">
+                                    <h4>{{ $exercises->Exercise_Name }}</h4>
+                                    <p>{{ $exercises->Primary_Muscle }}</p>
+                                    <button class="btn btn-success btn-lg border rounded shadow"
+                                        type="button">Edit</button>
+                                    <button class="btn btn-primary btn-lg border rounded shadow" type="button"
+                                        style="margin-left: 10px;">Show More</button>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
     </div>
 @endsection
