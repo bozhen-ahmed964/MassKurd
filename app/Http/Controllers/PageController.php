@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\courseModel;
 use App\Models\memberModel;
 use Illuminate\Http\Request;
 
@@ -105,6 +106,16 @@ class PageController extends Controller
     public function buildingCourse()
     {
         return view('admin.buildingCourse');
+    }
+    // insert new exercise
+    public function insertExercise(Request $request)
+    {
+        $exercise = new courseModel();
+        $exercise->Exercise_Name = $request->input('Exercise_Name');
+        $exercise->Primary_Muscle = $request->input('Primary_Muscle');
+        $exercise->image = $request->input('image');
+        $exercise->save();
+        return redirect('/buildingCourse')->with('success', 'Exercise Added Successfully');
     }
 
 

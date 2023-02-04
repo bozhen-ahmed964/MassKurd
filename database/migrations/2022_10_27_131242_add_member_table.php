@@ -13,20 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-
-        Schema::create('add_member_table' , function (Blueprint $table){
-            $table->id();
-            $table->string('Full_Name');
-            $table->Integer('Age');
-            $table->string('Gender');
-            $table->string('Phone_Number');
-            $table->Integer('Weight');
-            $table->string('Height');
-            $table->string('Game_Type');
-            $table->string('Pay');
-            $table->timestamps();
-        });
-
+        if (!Schema::hasTable('add_member_table')) {
+            Schema::create('add_member_table', function (Blueprint $table) {
+                $table->id();
+                $table->string('Full_Name');
+                $table->Integer('Age');
+                $table->string('Gender');
+                $table->string('Phone_Number');
+                $table->Integer('Weight');
+                $table->string('Height');
+                $table->string('Game_Type');
+                $table->string('Pay');
+                $table->timestamps();
+            });
+        }
     }
 
     /**
@@ -36,6 +36,5 @@ return new class extends Migration
      */
     public function down()
     {
-        //
     }
 };

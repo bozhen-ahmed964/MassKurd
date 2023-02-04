@@ -29,7 +29,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\PageController::class, 'index']);
     Route::get('/addMember', [App\Http\Controllers\PageController::class, 'addMember']);
     Route::get('/billing', [App\Http\Controllers\PageController::class, 'billing']);
-    Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
     Route::get('/findMe', [App\Http\Controllers\PageController::class, 'findMe']);
 
 
@@ -58,6 +57,11 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/memberTable/sort_By_Name', [\App\Http\Controllers\PageController::class, 'sortName']);
     Route::get('/memberTable/sort_By_Gender', [\App\Http\Controllers\PageController::class, 'sortGender']);
 
+
+
+    // anything that deals with billing table
+    Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
+    Route::post('/insertExercise', [App\Http\Controllers\PageController::class, 'insertExercise']);
 
 
 });
