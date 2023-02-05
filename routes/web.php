@@ -37,12 +37,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
 
 
-
     // profile routes
     Route::get('memberTable/profile/{id}', [App\Http\Controllers\PageController::class, 'profile']);
-
-
-
 
 
     // anything that deals with member table
@@ -61,7 +57,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     // anything that deals with billing table
     Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
+    // insert exercise
     Route::post('/insertExercise', [App\Http\Controllers\PageController::class, 'insertExercise']);
-   
-
+    // route to exercise detail
+    Route::get('/buildingCourse/exerciseDetail/{id}',[App\Http\Controllers\PageController::class,'exerciseDetail']);
 });

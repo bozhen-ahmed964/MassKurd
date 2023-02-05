@@ -226,11 +226,12 @@
                                     style="height: 360px;width: 360px;background: center / cover no-repeat;" />
                                 <div class="py-4">
                                     <h4>{{ $exercises->Exercise_Name }}</h4>
-                                    <p>{{ $exercises->Primary_Muscle }}</p>
+                                    <h6> Primary Mucle : {{ $exercises->Primary_Muscle }}</h6>
                                     <button class="btn btn-success btn-lg border rounded shadow"
                                         type="button">Edit</button>
-                                    <button class="btn btn-primary btn-lg border rounded shadow" type="button"
-                                        style="margin-left: 10px;">Show More</button>
+                                    <a href="{{ url('/buildingCourse/exerciseDetail/' . $exercises->id) }}"
+                                        class="btn btn-primary btn-lg border rounded shadow"
+                                        style="margin-left: 10px;">Show More</a>
                                 </div>
                             </div>
                         </div>

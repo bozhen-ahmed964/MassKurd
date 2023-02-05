@@ -133,6 +133,13 @@ class PageController extends Controller
         $exercise->save();
         return redirect('/buildingCourse')->with('success', 'Exercise Added Successfully');
     }
+    // exercise detail
+    public function exerciseDetail($id)
+    {
+        $exerciseData = courseModel::find($id);
+        return view('admin.exerciseDetail', compact('exerciseData'));
+
+    }
 
 
 
