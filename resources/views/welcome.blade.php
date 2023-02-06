@@ -55,32 +55,15 @@
             </div>
         </div>
     </div>
-    <div class="container py-5">
-        <div class="row mb-4 mb-lg-5">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <p class="fw-bold text-success mb-2">Our Team</p>
-                <h2 class="fw-bold">Contact Us Any Time</h2>
-                <p class="text-muted">No matter the project, our team can handle it. </p>
-            </div>
-        </div>
-        <div class="row row-cols-2 row-cols-md-3 mx-auto" style="max-width: 700px;">
-            <div class="col mb-4" style="width: 370px;">
-                <div class="text-center"><img class="rounded mb-3 fit-cover" width="150" height="150"
-                        src="team/avatar4.jpg" />
-                    <h5 class="fw-bold mb-0">Bozhen Ahmed</h5>
-                    <p class="text-muted mb-2">Manager<br />Back-End Developer</p>
-                </div>
-            </div>
-            <div class="col mb-4" style="text-align: left;width: 300px;">
-                <div class="text-center"><img class="rounded mb-3 fit-cover" width="150" height="150"
-                        src="team/avatar6.jpg" />
-                    <h5 class="fw-bold mb-0"><strong>Candy Jamal</strong></h5>
-                    <p class="text-muted mb-2">UI | Ux <br />Front-End Developer</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="text-center bg-dark">
+
+
+    
+
+
+
+
+    {{-- footer --}}
+    <footer class="text-center bg-primary">
         <div class="container text-white py-4 py-lg-5">
             <ul class="list-inline">
                 <li class="list-inline-item me-4"><a class="link-light" href="#">Web design</a></li>
@@ -109,7 +92,7 @@
                         </path>
                     </svg></li>
             </ul>
-            <p class="text-muted mb-0">Copyright © {{ date('Y') }} </p>
+            <p class="text-light mb-0">Copyright © {{ date('Y') }} </p>
         </div>
     </footer>
 
