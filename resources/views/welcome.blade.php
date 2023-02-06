@@ -109,7 +109,7 @@
                         </path>
                     </svg></li>
             </ul>
-            <p class="text-muted mb-0">Copyright © 2023 Brand</p>
+            <p class="text-muted mb-0">Copyright © {{ date('Y') }} </p>
         </div>
     </footer>
 
