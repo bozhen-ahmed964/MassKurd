@@ -1,17 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+    <div class="container py-5">
+        <div class="row mb-4 mb-lg-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <p class="fw-bold text-success mb-2">Login</p>
+                <h2 class="fw-bold">Welcome back</h2>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-xl-6">
                 <div class="card">
-                    <div class="card-header">
-                        <h3>Login</h3>
-                    </div>
-                    <div class="card-body">
+                    <div class="card-body text-center  align-items-center">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            <div class="row mb-3">
+                            <div class="row mb-4">
                                 <label for="email"
                                     class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
                                 <div class="col-md-6">
@@ -42,13 +45,14 @@
                                 </div>
                             </div>
                             <div class="row mb-0">
-                                <div class="col-md-8 offset-md-4">
+                                <div class="col-md-10 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Login') }}
                                     </button>
                                 </div>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
