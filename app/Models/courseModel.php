@@ -16,4 +16,8 @@ class courseModel extends Model
         'image',
 
     ];
+    public function member()
+    {
+        return $this->belongsToMany(memberModel::class);
+    }
 }

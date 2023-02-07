@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\courseModel;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class memberModel extends Model
 {
@@ -22,4 +23,8 @@ class memberModel extends Model
         'created_at',
         'updated_at',
     ];
+    public function course()
+    {
+        return $this->belongsToMany(courseModel::class);
+    }
 }
