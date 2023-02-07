@@ -62,9 +62,8 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $chestCount[0]->chestCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">Chest</p>
+                             <a href="#" class="btn btn-info btn-sm">Chest</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
                     </div>
                 </div>
                 {{-- trapezius --}}
@@ -73,9 +72,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $trapeziusCount[0]->trapeziusCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">trapezius</p>
+                             <a href="#" class="btn btn-info btn-sm">trapezius</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- shoulder --}}
@@ -84,9 +83,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $shoulderCount[0]->shoulderCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">shoulder</p>
+                             <a href="#" class="btn btn-info btn-sm">Shoulder</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- back / wing --}}
@@ -95,9 +94,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $backCount[0]->backCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">back / wing</p>
+                             <a href="#" class="btn btn-info btn-sm">Back / Wing</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- erector spinae --}}
@@ -106,9 +105,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $erectorCount[0]->erectorCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">Erector Spinae</p>
+                                <a href="#" class="btn btn-info btn-sm">erector spinae</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- biceps --}}
@@ -117,9 +116,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $bicepCount[0]->bicepCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">biceps</p>
+                                <a href="#" class="btn btn-info btn-sm">biceps</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- triceps --}}
@@ -128,9 +127,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $tricepCount[0]->tricepCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">triceps</p>
+                                <a href="#" class="btn btn-info btn-sm">triceps</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- forearm --}}
@@ -139,9 +138,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $forearmCount[0]->forearmCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">forearm</p>
+                                <a href="#" class="btn btn-info btn-sm">forearm</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- abs --}}
@@ -150,9 +149,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $absCount[0]->absCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">abs</p>
+                                <a href="#" class="btn btn-info btn-sm">abs</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- leg --}}
@@ -161,9 +160,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $legCount[0]->legCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">leg</p>
+                                <a href="#" class="btn btn-info btn-sm">leg</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- caif --}}
@@ -172,9 +171,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $caifCount[0]->caifCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">caif</p>
+                                <a href="#" class="btn btn-info btn-sm">caif</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- hips --}}
@@ -183,9 +182,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $hipsCount[0]->hipsCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">hips</p>
+                                <a href="#" class="btn btn-info btn-sm">hips</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- cardio --}}
@@ -194,9 +193,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $cardioCount[0]->cardioCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">cardio</p>
+                                <a href="#" class="btn btn-info btn-sm">cardio</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
                 {{-- full body --}}
@@ -205,9 +204,9 @@
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
                             <h2 class="fw-bold mb-0">{{ $fullbodyCount[0]->fullbodyCount }}</h2>
-                            <p class="mb-0" style="font-weight: bold;">full body</p>
+                                <a href="#" class="btn btn-info btn-sm">full body</a>
                         </div>
-                        <input type="radio" style="font-size: 20px;width: 20px;height: 20px;" />
+
                     </div>
                 </div>
             </div>
@@ -230,6 +229,9 @@
                                     <a href="{{ url('/buildingCourse/exerciseDetail/' . $exercises->id) }}"
                                         class="btn btn-primary btn-lg border rounded shadow"
                                         style="margin-left: 10px;">Show More</a>
+                                    <a href="#"
+                                        class="btn btn-info btn-lg border rounded shadow"
+                                        style="margin-left: 10px;">Add Exercise</a>
                                 </div>
                             </div>
                         </div>
