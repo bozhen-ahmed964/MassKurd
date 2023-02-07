@@ -20,7 +20,7 @@
                         <div class="col-md-6 col-lg-4 col-xl-4" style="width: 760px;height: 715px;">
                             <h1>{{ $exerciseData->Exercise_Name }}</h1>
                             <h4>{{ $exerciseData->Primary_Muscle }}</h4>
-                            <p style="height: 620px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+                            <p style="height: 620px;color:black;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
                                 repellat doloribus ea eius porro beatae reprehenderit enim illo ratione deleniti quisquam
                                 illum perspiciatis minus sit, repudiandae blanditiis amet a magnam temporibus sequi
                                 exercitationem tempore unde. Soluta ex in dolorem modi voluptas corporis delectus beatae
@@ -34,11 +34,7 @@
                                 src="{{ asset('images/' . $exerciseData->image) }}" class="border rounded border-3 shadow"
                                 style="width: 360px;height: 360px;background: center / cover no-repeat;" />
                             <div style="margin-top: 10px;">
-                                <h5>information</h5>
-                                <div class="progress border rounded shadow">
-                                    <div class="progress-bar bg-primary progress-bar-animated" aria-valuenow="50"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
-                                </div>
+
                             </div>
                         </div>
                     </div>

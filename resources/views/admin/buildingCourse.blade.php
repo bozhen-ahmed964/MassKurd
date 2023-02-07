@@ -227,8 +227,6 @@
                                 <div class="py-4">
                                     <h4>{{ $exercises->Exercise_Name }}</h4>
                                     <h6> Primary Mucle : {{ $exercises->Primary_Muscle }}</h6>
-                                    <button class="btn btn-success btn-lg border rounded shadow"
-                                        type="button">Edit</button>
                                     <a href="{{ url('/buildingCourse/exerciseDetail/' . $exercises->id) }}"
                                         class="btn btn-primary btn-lg border rounded shadow"
                                         style="margin-left: 10px;">Show More</a>
