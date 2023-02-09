@@ -10,14 +10,7 @@
                     <h3 class="text-white text-capitalize ps-3 ">Building Course</h3>
                 </div>
             </div>
-            {{-- sort section --}}
 
-        </div>
-    </div>
-
-    {{-- traininns --}}
-    <div class="card my-4">
-        <div class="card-body shadow-dark">
             <form action="{{ url('insertExercise') }}" method="post">
                 @csrf
                 <label class="form-label" style="color:rgb(0, 0, 0);"> Exercise Name :&nbsp;
@@ -55,167 +48,14 @@
                     style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Add New Exercise
                 </button>
             </form>
-            <div class="row gy-4 row-cols-2 row-cols-md-4">
-                {{-- Chest --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $chestCount }}</h2>
-                             <a href="#" class="btn btn-info btn-sm">Chest</a>
-                        </div>
-                    </div>
-                </div>
-                {{-- trapezius --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $trapeziusCount }}</h2>
-                             <a href="#" class="btn btn-info btn-sm">trapezius</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- shoulder --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $shoulderCount }}</h2>
-                             <a href="#" class="btn btn-info btn-sm">Shoulder</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- back / wing --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $backCount}}</h2>
-                             <a href="#" class="btn btn-info btn-sm">Back / Wing</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- erector spinae --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $erectorCount }}</h2>
-                                <a href="#" class="btn btn-info btn-sm">erector spinae</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- biceps --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $bicepCount}}</h2>
-                                <a href="#" class="btn btn-info btn-sm">biceps</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- triceps --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $tricepCount}}</h2>
-                                <a href="#" class="btn btn-info btn-sm">triceps</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- forearm --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $forearmCount}}</h2>
-                                <a href="#" class="btn btn-info btn-sm">forearm</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- abs --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $absCount}}</h2>
-                                <a href="#" class="btn btn-info btn-sm">abs</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- leg --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $legCount}}</h2>
-                                <a href="#" class="btn btn-info btn-sm">leg</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- caif --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $caifCount}}</h2>
-                                <a href="#" class="btn btn-info btn-sm">caif</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- hips --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $hipsCount}}</h2>
-                                <a href="#" class="btn btn-info btn-sm">hips</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- cardio --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $cardioCount}}</h2>
-                                <a href="#" class="btn btn-info btn-sm">cardio</a>
-                        </div>
-
-                    </div>
-                </div>
-                {{-- full body --}}
-                <div class="col" style="width: 175px;">
-                    <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
-                        style="width: 160px;height: 145.391px;">
-                        <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $fullbodyCount}}</h2>
-                                <a href="#" class="btn btn-info btn-sm">full body</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
+        <h3>All Exercises {{ $allExercise }}</h3>
     </div>
 
 
-    <div class="card">
-        <div class="card-body">
+
+    <div class="card my-4">
+        <div class="card-body shadow-dark">
             <div class="container py-4 py-xl-5">
                 <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
                     @foreach ($courses as $exercises)
@@ -227,10 +67,9 @@
                                     <h4>{{ $exercises->Exercise_Name }}</h4>
                                     <h6> Primary Mucle : {{ $exercises->Primary_Muscle }}</h6>
                                     <a href="{{ url('/buildingCourse/exerciseDetail/' . $exercises->id) }}"
-                                        class="btn btn-primary btn-lg border rounded shadow"
-                                        style="margin-left: 10px;">Show More</a>
-                                    <a href="#"
-                                        class="btn btn-info btn-lg border rounded shadow"
+                                        class="btn btn-primary btn-lg border rounded shadow" style="margin-left: 10px;">Show
+                                        More</a>
+                                    <a href="#" class="btn btn-info btn-lg border rounded shadow"
                                         style="margin-left: 10px;">Add Exercise</a>
                                 </div>
                             </div>
