@@ -61,7 +61,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $chestCount[0]->chestCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $chestCount }}</h2>
                              <a href="#" class="btn btn-info btn-sm">Chest</a>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $trapeziusCount[0]->trapeziusCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $trapeziusCount }}</h2>
                              <a href="#" class="btn btn-info btn-sm">trapezius</a>
                         </div>
 
@@ -82,7 +82,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $shoulderCount[0]->shoulderCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $shoulderCount }}</h2>
                              <a href="#" class="btn btn-info btn-sm">Shoulder</a>
                         </div>
 
@@ -93,7 +93,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $backCount[0]->backCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $backCount}}</h2>
                              <a href="#" class="btn btn-info btn-sm">Back / Wing</a>
                         </div>
 
@@ -104,7 +104,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $erectorCount[0]->erectorCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $erectorCount }}</h2>
                                 <a href="#" class="btn btn-info btn-sm">erector spinae</a>
                         </div>
 
@@ -115,7 +115,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $bicepCount[0]->bicepCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $bicepCount}}</h2>
                                 <a href="#" class="btn btn-info btn-sm">biceps</a>
                         </div>
 
@@ -126,7 +126,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $tricepCount[0]->tricepCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $tricepCount}}</h2>
                                 <a href="#" class="btn btn-info btn-sm">triceps</a>
                         </div>
 
@@ -137,7 +137,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $forearmCount[0]->forearmCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $forearmCount}}</h2>
                                 <a href="#" class="btn btn-info btn-sm">forearm</a>
                         </div>
 
@@ -148,7 +148,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $absCount[0]->absCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $absCount}}</h2>
                                 <a href="#" class="btn btn-info btn-sm">abs</a>
                         </div>
 
@@ -159,7 +159,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $legCount[0]->legCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $legCount}}</h2>
                                 <a href="#" class="btn btn-info btn-sm">leg</a>
                         </div>
 
@@ -170,7 +170,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $caifCount[0]->caifCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $caifCount}}</h2>
                                 <a href="#" class="btn btn-info btn-sm">caif</a>
                         </div>
 
@@ -181,7 +181,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $hipsCount[0]->hipsCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $hipsCount}}</h2>
                                 <a href="#" class="btn btn-info btn-sm">hips</a>
                         </div>
 
@@ -192,7 +192,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $cardioCount[0]->cardioCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $cardioCount}}</h2>
                                 <a href="#" class="btn btn-info btn-sm">cardio</a>
                         </div>
 
@@ -203,7 +203,7 @@
                     <div class="text-center d-flex flex-column justify-content-center align-items-center py-3"
                         style="width: 160px;height: 145.391px;">
                         <div class="px-3">
-                            <h2 class="fw-bold mb-0">{{ $fullbodyCount[0]->fullbodyCount }}</h2>
+                            <h2 class="fw-bold mb-0">{{ $fullbodyCount}}</h2>
                                 <a href="#" class="btn btn-info btn-sm">full body</a>
                         </div>
 

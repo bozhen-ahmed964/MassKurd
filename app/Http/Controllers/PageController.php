@@ -107,20 +107,20 @@ class PageController extends Controller
     public function buildingCourse()
     {
         $courses = courseModel::all();
-        $chestCount = DB::select("SELECT COUNT(*) as chestCount FROM course_table WHERE Primary_Muscle = 'chest'");
-        $trapeziusCount = DB::select("SELECT COUNT(*) as trapeziusCount FROM course_table WHERE Primary_Muscle = 'trapezius'");
-        $shoulderCount = DB::select("SELECT COUNT(*) as shoulderCount FROM course_table WHERE Primary_Muscle = 'shoulder'");
-        $backCount = DB::select("SELECT COUNT(*) as backCount FROM course_table WHERE Primary_Muscle = 'back / wing'");
-        $erectorCount = DB::select("SELECT COUNT(*) as erectorCount FROM course_table WHERE Primary_Muscle = 'erector spinae'");
-        $bicepCount = DB::select("SELECT COUNT(*) as bicepCount FROM course_table WHERE Primary_Muscle = 'biceps'");
-        $tricepCount = DB::select("SELECT COUNT(*) as tricepCount FROM course_table WHERE Primary_Muscle = 'triceps'");
-        $forearmCount = DB::select("SELECT COUNT(*) as forearmCount FROM course_table WHERE Primary_Muscle = 'forearm'");
-        $absCount = DB::select("SELECT COUNT(*) as absCount FROM course_table WHERE Primary_Muscle = 'abs / core'");
-        $legCount = DB::select("SELECT COUNT(*) as legCount FROM course_table WHERE Primary_Muscle = 'leg'");
-        $caifCount = DB::select("SELECT COUNT(*) as caifCount FROM course_table WHERE Primary_Muscle = 'caif'");
-        $hipsCount = DB::select("SELECT COUNT(*) as hipsCount FROM course_table WHERE Primary_Muscle = 'hips'");
-        $cardioCount = DB::select("SELECT COUNT(*) as cardioCount FROM course_table WHERE Primary_Muscle = 'cardio'");
-        $fullbodyCount = DB::select("SELECT COUNT(*) as fullbodyCount FROM course_table WHERE Primary_Muscle = 'full body'");
+        $chestCount = courseModel::where('Primary_Muscle', 'chest')->count();
+        $trapeziusCount = courseModel::where('Primary_Muscle', 'trapezius')->count();
+        $shoulderCount = courseModel::where('Primary_Muscle', 'shoulder')->count();
+        $backCount = courseModel::where('Primary_Muscle', 'back / wing')->count();
+        $erectorCount = courseModel::where('Primary_Muscle', 'erector spinae')->count();
+        $bicepCount = courseModel::where('Primary_Muscle', 'biceps')->count();
+        $tricepCount = courseModel::where('Primary_Muscle', 'triceps')->count();
+        $forearmCount = courseModel::where('Primary_Muscle', 'forearm')->count();
+        $absCount = courseModel::where('Primary_Muscle', 'abs')->count();
+        $legCount = courseModel::where('Primary_Muscle', 'leg')->count();
+        $caifCount = courseModel::where('Primary_Muscle', 'caif')->count();
+        $hipsCount = courseModel::where('Primary_Muscle', 'hips')->count();
+        $cardioCount = courseModel::where('Primary_Muscle', 'cardio')->count();
+        $fullbodyCount = courseModel::where('Primary_Muscle', 'full body')->count();
         return view('admin.buildingCourse', compact('courses', 'chestCount', 'trapeziusCount', 'shoulderCount', 'backCount', 'erectorCount', 'bicepCount', 'tricepCount', 'forearmCount', 'absCount', 'legCount', 'caifCount', 'hipsCount', 'cardioCount', 'fullbodyCount'));
     }
     // insert new exercise
