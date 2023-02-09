@@ -49,7 +49,6 @@
                 </button>
             </form>
         </div>
-        <h3>All Exercises {{ $allExercise }}</h3>
     </div>
 
 
