@@ -50,15 +50,11 @@
         </div>
         <div class="col-md-6 mb-4">
             <div class="p-5 mx-lg-5" style="background: center / contain no-repeat;">
-                <img class="rounded shadow w-100 fit-cover" style="min-height: 300px;"
-                    src="{{ asset('public/images/main-background.jpg') }}" />
+                <img class="rounded shadow w-80 fit-cover" style="min-height: 250px;"
+                    src="{{ asset('/images/welcomeImage.jpg') }}" alt="welcomeImage" />
             </div>
         </div>
     </div>
-
-
-    
-
 
 
 

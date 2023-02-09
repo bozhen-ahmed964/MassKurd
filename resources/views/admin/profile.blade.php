@@ -21,10 +21,9 @@
 
             <div class="container-fluid px-2 px-md-4">
                 <div class="page-header min-height-300 border-radius-xl mt-4"
-                    style="background-image: url('https://images.unsplash.com/photo-1637666218229-1fe0a9419267?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');">
+                    style="background-image: url('{{ asset('/images/profileImage.jpeg') }}');">
                     <span class="mask  bg-gradient-dark  opacity-6"></span>
                 </div>
-
 
 
 
