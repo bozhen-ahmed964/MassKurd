@@ -135,11 +135,6 @@
                                     <div class="card card-plain h-100">
                                         <div class="card-body p-3">
                                             <hr class="horizontal gray-light my-4">
-
-                                            <ul>
-                                                
-                                            </ul>
-
                                         </div>
                                     </div>
                                 </div>
