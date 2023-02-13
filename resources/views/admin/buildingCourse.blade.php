@@ -16,12 +16,12 @@
                 <label class="form-label" style="color:rgb(0, 0, 0);"> Exercise Name :&nbsp;
                     <input class="form-control form-control-lg shadow-dark form-outline" type="text"
                         style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
-                        name="Exercise_Name" required="">
+                        name="Exercise_Name">
                 </label>
                 <label class="form-label" style="color:rgb(0, 0, 0);"> Primary Muscle :&nbsp;
                     <Select
                         class="form-control form-control-lg shadow-dark form-outline"style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
-                        name="Primary_Muscle" required="">
+                        name="Primary_Muscle">
                         <option value="chest">Chest</option>
                         <option value="trapezius">trapezius</option>
                         <option value="shoulder">Shoulder</option>
@@ -42,7 +42,7 @@
                 <label class="form-label" style="color:rgb(0, 0, 0);"> image :&nbsp;
                     <input class="form-control form-control-lg shadow-dark form-outline" type="file"
                         style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
-                        name="image" required="">
+                        name="image">
                 </label>
                 <button class="btn btn-success btn-lg" type="submit"
                     style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Add New Exercise
@@ -56,25 +56,42 @@
     <div class="card my-4">
         <div class="card-body shadow-dark">
             <div class="container py-4 py-xl-5">
-                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-                    @foreach ($courses as $exercises)
-                        <div class="col">
-                            <div><img src="{{ asset('images/' . $exercises->image) }}"
-                                    class="rounded img-fluid border-3 border-primary shadow d-block w-100 fit-cover"
-                                    style="height: 360px;width: 360px;background: center / cover no-repeat;" />
-                                <div class="py-4">
-                                    <h4>{{ $exercises->Exercise_Name }}</h4>
-                                    <h6> Primary Mucle : {{ $exercises->Primary_Muscle }}</h6>
-                                    <a href="{{ url('/buildingCourse/exerciseDetail/' . $exercises->id) }}"
-                                        class="btn btn-primary btn-lg border rounded shadow" style="margin-left: 10px;">Show
-                                        More</a>
-                                    <a href="#" class="btn btn-info btn-lg border rounded shadow"
-                                        style="margin-left: 10px;">Add Exercise</a>
+                <form action="{{ url('add_exercise') }}" method="post">
+                    @csrf
+                    <label class="form-label mb-6" style="color:rgb(0, 0, 0);"> Member Name :&nbsp;
+                        <Select
+                            class="form-control form-control-lg shadow-dark form-outline"style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                            name="member_id">
+                            @foreach ($members as $memberName)
+                                <option value="{{ $memberName->id }}">{{ $memberName->Full_Name }}</option>
+                            @endforeach
+                        </Select>
+                    </label>
+                    <button class="btn btn-dark btn-lg" type="submit"
+                        style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Add Exercise To Member
+                    </button>
+                    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                        @foreach ($courses as $exercises)
+                            <div class="col">
+                                <div><img src="{{ asset('images/' . $exercises->image) }}"
+                                        class="rounded img-fluid border-3 border-primary shadow d-block w-100 fit-cover"
+                                        style="height: 360px;width: 360px;background: center / cover no-repeat;" />
+                                    <div class="py-4">
+                                        <h4>{{ $exercises->Exercise_Name }}</h4>
+                                        <h6> Primary Mucle : {{ $exercises->Primary_Muscle }}</h6>
+                                        <a href="{{ url('/buildingCourse/exerciseDetail/' . $exercises->id) }}"
+                                            class="btn btn-primary btn-lg border rounded shadow"
+                                            style="margin-left: 10px;">Show
+                                            More</a>
+                                        <div class="form-check" style="margin-bottom: 8px;"><input value="{{ $exercises->id }}" name="exercises" id="formCheck-1"
+                                                class="form-check-input" type="checkbox" /><label class="form-check-label"
+                                                for="formCheck-1" style="font-weight: bold;">Select Exercise</label></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
-                </div>
+                        @endforeach
+                    </div>
+                </form>
             </div>
         </div>
     </div>

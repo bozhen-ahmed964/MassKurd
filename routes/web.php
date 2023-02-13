@@ -59,6 +59,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
     // insert exercise
     Route::post('/insertExercise', [App\Http\Controllers\PageController::class, 'insertExercise']);
+    // add exercise to member
+    Route::post('/add_exercise',[App\Http\Controllers\PageController::class, 'addExercise']);
     // route to exercise detail
     Route::get('/buildingCourse/exerciseDetail/{id}',[App\Http\Controllers\PageController::class,'exerciseDetail']);
 });

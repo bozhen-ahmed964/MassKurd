@@ -107,7 +107,8 @@ class PageController extends Controller
     public function buildingCourse()
     {
         $courses = courseModel::all();
-        return view('admin.buildingCourse', compact('courses'));
+        $members = memberModel::all();
+        return view('admin.buildingCourse', compact('courses' , 'members'));
     }
     // insert new exercise
     public function insertExercise(Request $request)
@@ -119,6 +120,15 @@ class PageController extends Controller
         $exercise->save();
         return redirect('/buildingCourse')->with('success', 'Exercise Added Successfully');
     }
+    // add exercise to member
+    public function addExercise(Request $request)
+    {
+        $member = memberModel::find($request->member_id);
+        $member->course()->attach($request->course_id);
+        return redirect('/buildingCourse')->with('success', 'Exercises added successfully');
+    }
+
+
     // exercise detail
     public function exerciseDetail($id)
     {
@@ -164,8 +174,9 @@ class PageController extends Controller
 
 
     // route to profile page
-    public function profile($id)
+    public function profile($id )
     {
+
         $profileData = memberModel::find($id);
         return view('admin.profile', compact('profileData'));
     }

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\memberModel;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class courseModel extends Model
 {
@@ -18,6 +19,7 @@ class courseModel extends Model
     ];
     public function member()
     {
-        return $this->belongsToMany(memberModel::class);
+        return $this->belongsToMany(memberModel::class, 'member_course');
+
     }
 }
