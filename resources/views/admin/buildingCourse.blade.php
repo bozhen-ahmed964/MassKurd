@@ -83,9 +83,11 @@
                                             class="btn btn-primary btn-lg border rounded shadow">Show
                                             More</a>
                                         <div class="form-check">
-                                            <input value="{{ $exercises->id }}" name="exercises" id="formCheck-1"
-                                                class="form-check-input" type="checkbox" /><label class="form-check-label"
-                                                for="formCheck-1" style="font-weight: bold;">Select Exercise</label>
+                                            <input value="{{ $exercises->id }}" name="exercises"
+                                                id="formCheck-{{ $exercises->id }}" class="form-check-input"
+                                                type="checkbox" /><label class="form-check-label"
+                                                for="formCheck-{{ $exercises->id }}" style="font-weight: bold;">Select
+                                                Exercise</label>
                                         </div>
                                     </div>
                                 </div>
