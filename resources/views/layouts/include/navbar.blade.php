@@ -1,9 +1,15 @@
-<nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"data-scroll="true">
-    <h3>Bozhen Ahmed</h3>
-    <h3 class="mx-4"><?php echo date('Y-m-d', strtotime('now')); ?></h3>
-    <h3 id="time">00:00:00 PM</h3>
+<div class="card mb-4">
+    <div class="card-body">
+        <nav class="navbar navbar-expand-lg shadow-none" data-scroll="true">
+            <h3>Bozhen Ahmed</h3>
+            <h3 class="mx-4"><?php echo date('Y-m-d', strtotime('now')); ?></h3>
+            <h3 id="time">00:00:00 PM</h3>
+        </nav>
+    </div>
+</div>
 
-</nav>
+
+
 <script>
     const time = document.getElementById('time');
     // show Time
