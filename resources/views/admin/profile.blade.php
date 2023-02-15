@@ -131,15 +131,86 @@
 
 
                                 {{-- 1 --}}
-                                <div class="col-4 col-xl-3">
+                                <div class="col-5 col-xl-6">
                                     <div class="card card-plain h-100">
                                         <div class="card-body p-3">
                                             <hr class="horizontal gray-light my-4">
+                                            <div class="table-responsive">
+                                                <table class="table table-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>NO</th>
+                                                            <th>Exercise Name</th>
+                                                            <th>Primary Muscle</th>
+                                                            <th>Set</th>
+                                                            <th>Times</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 3</td>
+                                                            <td>Cell 4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 3</td>
+                                                            <td>Cell 4</td>
+                                                            <td>Cell 3</td>
+                                                            <td>Cell 4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 3</td>
+                                                            <td>Cell 4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 3</td>
+                                                            <td>Cell 4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 3</td>
+                                                            <td>Cell 4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 3</td>
+                                                            <td>Cell 4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 3</td>
+                                                            <td>Cell 4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 1</td>
+                                                            <td>Cell 2</td>
+                                                            <td>Cell 3</td>
+                                                            <td>Cell 4</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 {{-- 2 --}}
-                                <div class="col-4 col-xl-3 mx-10">
+                                <div class="col-4 col-xl-3 ml-4">
                                     <div class="card card-plain h-100">
                                         <div class="card-body p-3">
                                             <hr class="horizontal gray-light my-4">
