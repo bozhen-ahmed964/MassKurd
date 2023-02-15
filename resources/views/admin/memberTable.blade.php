@@ -13,53 +13,57 @@
             <div class="row my-2">
                 <h3>Sort By : </h3>
                 <div class="col-3">
-                    <a href="{{ url('/memberTable/sort_By_Name') }}" class="btn btn-warning btn-lg">Name</a>
-                    <a href="{{ url('/memberTable/sort_By_Gender') }}" class="btn btn-warning btn-lg mx-2">Gender</a>
-                    
+                    <a href="{{ url('/memberTable/sort_By_Name') }}" class="btn btn-info btn-lg">Name</a>
+                    <a href="{{ url('/memberTable/sort_By_Gender') }}" class="btn btn-info btn-lg mx-2">Gender</a>
+
                 </div>
             </div>
-            <table class="table table-bordered shadow-dark align-items-center">
-                <thead style="font-size:18px;background-color:#494949d5;color:white;">
-                    <tr>
-                        <th>ID</th>
-                        <th>Full Name</th>
-                        <th>Age</th>
-                        <th>Gender</th>
-                        <th>Pay</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                        <th>Status</th>
-                        <th>Options</th>
-                    </tr>
-                </thead>
-                <tbody style="font-weight: bold; font-size:20px; text-align:center; color:black;">
-                    @foreach ($memberTable as $item)
+            <div class="border rounded">
+                <table class="table table-hover shadow-dark align-items-center">
+                    <thead style="font-size:18px;background-color:#494949d5;color:white;">
                         <tr>
-                            <td>{{ $item->id }}</td>
-                            <td style="text-align:left">{{ $item->Full_Name }}</td>
-                            <td>{{ $item->Age }}</td>
-                            <td>{{ $item->Gender }}</td>
-                            <td>{{ $item->Pay }}</td>
-                            <td>{{ $item->created_at }}</td>
-                            <td>{{ $item->updated_at }}</td>
-                            <td>
-                                <button
-                                    class="{{ $item->created_at < $item->updated_at ? 'btn btn-success' : 'btn btn-dark' }}"
-                                    {{ $item->created_at >= $item->updated_at ? 'disabled' : '' }}>
-                                    {{ $item->created_at < $item->updated_at ? 'Active' : 'Deactive' }}
-                                </button>
-                            </td>
-                            <td>
-                                <a href="{{ url('memberTable/profile/' . $item->id) }}"
-                                    class="btn btn-dark btn-lg">Info</a>
-                                <a href="{{ url('edit-member/' . $item->id) }}" class="btn btn-dark btn-lg">Edit</a>
-                                <a href="{{ url('delete-member/' . $item->id) }}" class="btn btn-primary btn-lg">Delete</a>
-                            </td>
+                            <th>ID</th>
+                            <th>Full Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Pay</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Status</th>
+                            <th>Options</th>
                         </tr>
-                    @endforeach
+                    </thead>
+                    <tbody style="font-weight: bold; font-size:20px; text-align:center; color:black;">
+                        @foreach ($memberTable as $item)
+                            <tr>
+                                <td>{{ $item->id }}</td>
+                                <td style="text-align:left">{{ $item->Full_Name }}</td>
+                                <td>{{ $item->Age }}</td>
+                                <td>{{ $item->Gender }}</td>
+                                <td>{{ $item->Pay }}</td>
+                                <td>{{ $item->created_at }}</td>
+                                <td>{{ $item->updated_at }}</td>
+                                <td>
+                                    <button
+                                        class="{{ $item->created_at < $item->updated_at ? 'btn btn-success' : 'btn btn-dark' }}"
+                                        {{ $item->created_at >= $item->updated_at ? 'disabled' : '' }}>
+                                        {{ $item->created_at < $item->updated_at ? 'Active' : 'Deactive' }}
+                                    </button>
+                                </td>
+                                <td>
+                                    <a href="{{ url('memberTable/profile/' . $item->id) }}"
+                                        class="btn btn-dark btn-lg">Info</a>
+                                    <a href="{{ url('edit-member/' . $item->id) }}" class="btn btn-dark btn-lg">Edit</a>
+                                    <a href="{{ url('delete-member/' . $item->id) }}"
+                                        class="btn btn-primary btn-lg">Delete</a>
+                                </td>
+                            </tr>
+                        @endforeach
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 @endsection
