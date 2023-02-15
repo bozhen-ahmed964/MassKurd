@@ -1,16 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        body {
+            background-image: url('/images/backgrorunds/imageHere');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    </style>
     <div class="container py-5">
-        <div class="row mb-4 mb-lg-5">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <p class="fw-bold text-success mb-2">Login</p>
-                <h2 class="fw-bold">Welcome back</h2>
-            </div>
-        </div>
         <div class="row d-flex justify-content-center">
             <div class="col-md-6 col-xl-6">
                 <div class="card">
+                    <div class="card-header">
+                        <p class="fw-bold text-success mb-2">Login</p>
+                        <h2 class="fw-bold">Welcome back</h2>
+                    </div>
                     <div class="card-body text-center  align-items-center">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
