@@ -80,12 +80,13 @@
                                         <h4>{{ $exercises->Exercise_Name }}</h4>
                                         <h6> Primary Mucle : {{ $exercises->Primary_Muscle }}</h6>
                                         <a href="{{ url('/buildingCourse/exerciseDetail/' . $exercises->id) }}"
-                                            class="btn btn-primary btn-lg border rounded shadow"
-                                            style="margin-left: 10px;">Show
+                                            class="btn btn-primary btn-lg border rounded shadow">Show
                                             More</a>
-                                        <div class="form-check" style="margin-bottom: 8px;"><input value="{{ $exercises->id }}" name="exercises" id="formCheck-1"
+                                        <div class="form-check">
+                                            <input value="{{ $exercises->id }}" name="exercises" id="formCheck-1"
                                                 class="form-check-input" type="checkbox" /><label class="form-check-label"
-                                                for="formCheck-1" style="font-weight: bold;">Select Exercise</label></div>
+                                                for="formCheck-1" style="font-weight: bold;">Select Exercise</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
