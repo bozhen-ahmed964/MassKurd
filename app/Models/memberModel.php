@@ -25,7 +25,7 @@ class memberModel extends Model
     ];
     public function course()
     {
-        return $this->belongsToMany(courseModel::class, 'member_course');
+        return $this->belongsToMany(courseModel::class, 'member_course', 'member_id', 'course_id');
 
     }
 }

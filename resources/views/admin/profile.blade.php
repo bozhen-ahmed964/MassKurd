@@ -143,66 +143,26 @@
                                                             <th>Exercise Name</th>
                                                             <th>Primary Muscle</th>
                                                             <th>Set</th>
-                                                            <th>Times</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 2</td>
-                                                            <td>Cell 3</td>
-                                                            <td>Cell 4</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 3</td>
-                                                            <td>Cell 4</td>
-                                                            <td>Cell 3</td>
-                                                            <td>Cell 4</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 2</td>
-                                                            <td>Cell 3</td>
-                                                            <td>Cell 4</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 2</td>
-                                                            <td>Cell 3</td>
-                                                            <td>Cell 4</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 2</td>
-                                                            <td>Cell 3</td>
-                                                            <td>Cell 4</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 2</td>
-                                                            <td>Cell 3</td>
-                                                            <td>Cell 4</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 2</td>
-                                                            <td>Cell 3</td>
-                                                            <td>Cell 4</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 1</td>
-                                                            <td>Cell 2</td>
-                                                            <td>Cell 3</td>
-                                                            <td>Cell 4</td>
-                                                        </tr>
+                                                        @foreach ($profileData->course as $index => $course)
+                                                            <tr>
+                                                                <td>{{ $index + 1 }}</td>
+                                                                <td>{{ $course->Exercise_Name }}</td>
+                                                                <td>{{ $course->Primary_Muscle }}</td>
+                                                                <td>
+                                                                    <form
+                                                                        action="{{ route('destroyProfile', [$profileData->id, $course->id]) }}"
+                                                                        method="post">
+                                                                        @method('delete')
+                                                                        @csrf
+                                                                        <button type="submit"
+                                                                            class="btn-danger">delete</button>
+                                                                    </form>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>

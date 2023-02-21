@@ -2,7 +2,7 @@
     <div class="card-body">
         <nav class="navbar navbar-expand-lg shadow-none" data-scroll="true">
             <h3>Bozhen Ahmed</h3>
-            <h3 class="mx-4"><?php echo date('Y-m-d', strtotime('now')); ?></h3>
+             <h3 class="mx-4">{{ date('Y-m-d', strtotime('now')) }} </h3>
             <h3 id="time">00:00:00 PM</h3>
         </nav>
     </div>

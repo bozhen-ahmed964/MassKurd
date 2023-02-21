@@ -108,7 +108,7 @@ class PageController extends Controller
     {
         $courses = courseModel::all();
         $members = memberModel::all();
-        return view('admin.buildingCourse', compact('courses' , 'members'));
+        return view('admin.buildingCourse', compact('courses', 'members'));
     }
     // insert new exercise
     public function insertExercise(Request $request)
@@ -124,7 +124,7 @@ class PageController extends Controller
     public function addExercise(Request $request)
     {
         $member = memberModel::find($request->member_id);
-        $member->course()->attach($request->course_id);
+        $member->course()->attach($request->exercises);
         return redirect('/buildingCourse')->with('success', 'Exercises added successfully');
     }
 
@@ -134,7 +134,6 @@ class PageController extends Controller
     {
         $exerciseData = courseModel::find($id);
         return view('admin.exerciseDetail', compact('exerciseData'));
-
     }
 
 
@@ -174,12 +173,19 @@ class PageController extends Controller
 
 
     // route to profile page
-    public function profile($id )
+    public function profile($id)
     {
-
-        $profileData = memberModel::find($id);
+        $profileData = memberModel::with('course')->find($id);
+        // dd($profileData);
         return view('admin.profile', compact('profileData'));
     }
+
+    public function destroyProfile($userId, $courseId)
+    {
+        DB::table('member_course')->where('member_id', $userId)->where('course_id', $courseId)->delete();
+        return \back()->with('success', 'Exercises deleted successfully');
+    }
+
     public function findMe()
     {
         return view('admin.findMe');
