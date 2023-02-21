@@ -3,6 +3,17 @@
 
 
 @section('content')
+
+
+    @if (session()->has('success'))
+        <div x-data="{ showw: true }" x-show="showw" x-init="setTimeout(() => showw = false, 3000)"
+            class="alert alert-success shadow-lg w-3/4 lg:w-1/4 p-3 absolute z-30 top-1/4 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center rounded-lg dir1">
+            <ul class=" list-inside text-base text-accent">
+                <li>{{ session()->get('success') }}</li>
+            </ul>
+        </div>
+    @endif
+
     <div class="card">
         <div class="card-body shadow-dark">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
