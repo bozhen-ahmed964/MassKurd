@@ -50,7 +50,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/edit-member/{id}', [App\Http\Controllers\PageController::class, 'editMember']);
     Route::put('/update-member/{id}', [App\Http\Controllers\PageController::class, 'updateFunction']);
     // delete button
-    Route::delete('/delete-member/{id}', [App\Http\Controllers\PageController::class, 'destroy']);
+    Route::delete('/delete-member/{id}', [App\Http\Controllers\PageController::class, 'destroyProfile']);
+    Route::get('/delete-member/{id}', [App\Http\Controllers\PageController::class, 'destroy']);
     // filter buttons
     Route::get('/memberTable/sort_By_Name', [\App\Http\Controllers\PageController::class, 'sortName']);
     Route::get('/memberTable/sort_By_Gender', [\App\Http\Controllers\PageController::class, 'sortGender']);
