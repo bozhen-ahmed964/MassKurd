@@ -17,7 +17,7 @@
                             class="rounded border" style="margin-left: 10px;" /></div>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                    <div class="col mb-5"><img class="rounded img-fluid shadow" src="products/1.jpg" /></div>
+                    <div class="col mb-5"><img class="rounded img-fluid shadow" src="{{ asset('/images/extra/bozhen.jpg') }}" /></div>
                     <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                         <div>
                             <h5 class="fw-bold">Bozhen Ahmed </h5>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                    <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" src="products/2.jpg" /></div>
+                    <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" src="{{ asset('/images/extra/bozhen.jpg') }}" /></div>
                     <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                         <div>
                             <h5 class="fw-bold">Candy Jamal</h5>
