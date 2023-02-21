@@ -60,7 +60,7 @@
     <script src="{{ asset('/public/admin/js/material-dashboard.js') }}" defer></script>
     <script src="{{ asset('/public/admin/js/material-dashboard.js.map') }}" defer></script>
     <script src="{{ asset('/public/admin/js/material-dashboard.min.js') }}" defer></script>
-
+    <script src="{{ asset('/resources/js/app.js') }}" defer></script>
 
 
 

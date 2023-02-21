@@ -2,16 +2,6 @@
 
 
 @section('content')
-    <style>
-        /* customize the color for odd rows */
-        tr:nth-child(even) {
-            background-color: #4949498b;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #cecece8a;
-        }
-    </style>
     <div class="card">
         <div class="card-body shadow-dark">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -134,10 +124,9 @@
                                 <div class="col-5 col-xl-6">
                                     <div class="card card-plain h-100">
                                         <div class="card-body p-3">
-                                            <hr class="horizontal gray-light my-4">
-                                            <div class="table-responsive">
-                                                <table class="table table-sm">
-                                                    <thead>
+                                            <div class="table-responsive border rounded">
+                                                <table class="table table-hover shadow-dark align-items-center">
+                                                    <thead style="font-size:18px;background-color:#494949d5;color:white;">
                                                         <tr>
                                                             <th>NO</th>
                                                             <th>Exercise Name</th>
@@ -145,12 +134,12 @@
                                                             <th>Set</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
+                                                    <tbody style="font-weight: bold; font-size:20px;  color:black;">
                                                         @foreach ($profileData->course as $index => $course)
                                                             <tr>
-                                                                <td>{{ $index + 1 }}</td>
+                                                                <td class="text-center">{{ $index + 1 }}</td>
                                                                 <td>{{ $course->Exercise_Name }}</td>
-                                                                <td>{{ $course->Primary_Muscle }}</td>
+                                                                <td class="text-center">{{ $course->Primary_Muscle }}</td>
                                                                 <td>
                                                                     <form
                                                                         action="{{ route('destroyProfile', [$profileData->id, $course->id]) }}"
@@ -158,7 +147,7 @@
                                                                         @method('delete')
                                                                         @csrf
                                                                         <button type="submit"
-                                                                            class="btn-danger">delete</button>
+                                                                            class="btn btn-primary btn-sm">delete</button>
                                                                     </form>
                                                                 </td>
                                                             </tr>
