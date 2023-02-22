@@ -3,14 +3,11 @@
 
 
 @section('content')
-
-
     @if (session()->has('success'))
-        <div x-data="{ showw: true }" x-show="showw" x-init="setTimeout(() => showw = false, 3000)"
-            class="alert alert-success shadow-lg w-3/4 lg:w-1/4 p-3 absolute z-30 top-1/4 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center rounded-lg dir1">
-            <ul class=" list-inside text-base text-accent">
-                <li>{{ session()->get('success') }}</li>
-            </ul>
+        <div x-data="{ showw: true }" x-show="showw" x-init="setTimeout(() => showw = false, 5000)" class="alert alert-success alert-dismissible"
+            style="width: 600px;">
+            <h4 class="alert-heading" style="color: rgb(255,255,255);">Alert Heading</h4>
+            <h4 class="text-white">{{ session()->get('success') }}</h4>
         </div>
     @endif
 
