@@ -101,12 +101,12 @@
                         {{-- buttons --}}
                         <div class="row">
                             <div class="col-6">
-                                <button class="btn btn-dark btn-lg">Get Training Course</button>
+                                <a href="{{ url('/buildingCourse') }}" class="btn btn-dark btn-lg">Get Training Course</a>
                                 <button class="btn btn-dark btn-lg">Get Meal Course</button>
-                                <button class="btn btn-dark btn-lg">Get Print</button>
+                                <button class="btn btn-primary btn-lg">Print Course</button>
+                                <button class="btn btn-primary btn-lg">Print Bill</button>
                             </div>
                         </div>
-
                     </div>
 
 
