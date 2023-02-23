@@ -128,12 +128,20 @@ class PageController extends Controller
         return redirect('/buildingCourse')->with('success', 'Exercises added successfully');
     }
 
-
     // exercise detail
     public function exerciseDetail($id)
     {
         $exerciseData = courseModel::find($id);
         return view('admin.exerciseDetail', compact('exerciseData'));
+    }
+    //search for exercise
+    public function searchExercise(Request $request)
+    {
+        $courses = courseModel::all();
+        $members = memberModel::all();
+        $select = $request->input('query');
+        $exerciseData = courseModel::where('Primary_Muscle', 'like', '%' . $select . '%')->get();
+        return view('admin.searchExercise', compact('exerciseData' , 'members'));
     }
 
 

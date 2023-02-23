@@ -57,7 +57,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/memberTable/sort_By_Gender', [\App\Http\Controllers\PageController::class, 'sortGender']);
 
 
-
+    //search for exercise
+    Route::get('/buildingCourse/searchExercise', [App\Http\Controllers\PageController::class, 'searchExercise']);
     // anything that deals with billing table
     Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
     // insert exercise
