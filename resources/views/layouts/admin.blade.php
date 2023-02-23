@@ -61,7 +61,7 @@
     <script src="{{ asset('/public/admin/js/material-dashboard.js.map') }}" defer></script>
     <script src="{{ asset('/public/admin/js/material-dashboard.min.js') }}" defer></script>
     @vite(['resources/js/app.js'])
-
+    @include('sweetalert::alert')
 
 
     @yield('scirpt')

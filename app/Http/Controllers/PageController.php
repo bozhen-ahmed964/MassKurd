@@ -6,6 +6,7 @@ use App\Models\courseModel;
 use App\Models\memberModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PageController extends Controller
 {
@@ -72,6 +73,7 @@ class PageController extends Controller
     {
         $member = memberModel::find($id);
         $member->delete();
+        Alert::success('Deleted', 'Member Deleted Successfully');
         return redirect('memberTable')->with('status', 'Member Deleted Successfully');
     }
 
