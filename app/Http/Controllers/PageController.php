@@ -38,7 +38,8 @@ class PageController extends Controller
         $member->Pay = $request->input('Pay');
         $member->updated_at = $request->input('end_at');
         $member->save();
-        return redirect('/addMember')->with('success', 'Member Added Successfully');
+        Alert::success('Added', 'Member Added Successfully');
+        return redirect('/addMember');
     }
     // for fetching all data in data base to table
     public function memberTable()
@@ -66,7 +67,8 @@ class PageController extends Controller
         $member->Pay = $request->input('Pay');
         $member->updated_at = $request->input('end_at');
         $member->update();
-        return redirect('memberTable')->with('status', "Member Updated Successfully");
+        Alert::success('Info', 'Info Updated Successfully');
+        return redirect('memberTable');
     }
     // delete member button
     public function destroy($id)
@@ -74,7 +76,7 @@ class PageController extends Controller
         $member = memberModel::find($id);
         $member->delete();
         Alert::success('Deleted', 'Member Deleted Successfully');
-        return redirect('memberTable')->with('status', 'Member Deleted Successfully');
+        return redirect('memberTable');
     }
 
     // sort buttons
@@ -120,14 +122,16 @@ class PageController extends Controller
         $exercise->Primary_Muscle = $request->input('Primary_Muscle');
         $exercise->image = $request->input('image');
         $exercise->save();
-        return redirect('/buildingCourse')->with('success', 'Exercise Added Successfully');
+        Alert::success('Added', 'Exercise Added Successfully');
+        return redirect('/buildingCourse');
     }
     // add exercise to member
     public function addExercise(Request $request)
     {
         $member = memberModel::find($request->member_id);
         $member->course()->attach($request->exercises);
-        return redirect('/buildingCourse')->with('success', 'Exercises added successfully');
+        Alert::success('Added', 'Exercises Added To Member Successfully');
+        return redirect('/buildingCourse');
     }
 
     // exercise detail
@@ -143,7 +147,7 @@ class PageController extends Controller
         $members = memberModel::all();
         $select = $request->input('query');
         $exerciseData = courseModel::where('Primary_Muscle', 'like', '%' . $select . '%')->get();
-        return view('admin.searchExercise', compact('exerciseData' , 'members'));
+        return view('admin.searchExercise', compact('exerciseData', 'members'));
     }
 
 
@@ -193,6 +197,7 @@ class PageController extends Controller
     public function destroyProfile($userId, $courseId)
     {
         DB::table('member_course')->where('member_id', $userId)->where('course_id', $courseId)->delete();
+        Alert::success('Deleted', 'Exercises Has Been Deleted');
         return \back()->with('success', 'Exercises deleted successfully');
     }
 

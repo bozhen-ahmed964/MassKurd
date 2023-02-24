@@ -3,14 +3,6 @@
 
 
 @section('content')
-    @if (session()->has('success'))
-        <div x-data="{ showw: true }" x-show="showw" x-init="setTimeout(() => showw = false, 5000)" class="alert alert-success alert-dismissible"
-            style="width: 600px;">
-            <h4 class="alert-heading" style="color: rgb(255,255,255);">Alert Heading</h4>
-            <h4 class="text-white">{{ session()->get('success') }}</h4>
-        </div>
-    @endif
-
     <div class="card">
         <div class="card-body shadow-dark">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
