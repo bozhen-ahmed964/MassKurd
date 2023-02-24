@@ -40,7 +40,7 @@
                                 <td style="text-align:left">{{ $item->Full_Name }}</td>
                                 <td>{{ $item->Age }}</td>
                                 <td>{{ $item->Gender }}</td>
-                                <td>{{ $item->Pay }}</td>
+                                <td>{{ $item->Pay }}IQD</td>
                                 <td>{{ $item->created_at }}</td>
                                 <td>{{ $item->updated_at }}</td>
                                 <td>

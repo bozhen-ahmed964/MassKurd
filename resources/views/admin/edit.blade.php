@@ -72,14 +72,13 @@
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Pay :<br>
                             <select name="Pay" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
-                                <option>30,000 IQD</option>
-                                <option>90,000 IQD</option>
-
+                                <option value="30,000">30,000</option>
+                                <option value="90,000">90,000</option>
                             </select>
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> End Date :<br>
                             <input class="form-control form-control-lg shadow-dark" type="date"
-                                value="{{ $member->updated_at}}"
+                                value="{{ $member->updated_at }}"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="end_at">
                         </label>

@@ -102,7 +102,6 @@
                         <div class="row">
                             <div class="col-6">
                                 <a href="{{ url('/buildingCourse') }}" class="btn btn-dark btn-lg">Get Training Course</a>
-                                <button class="btn btn-dark btn-lg">Get Meal Course</button>
                                 <button class="btn btn-primary btn-lg">Print Course</button>
                                 <button class="btn btn-primary btn-lg">Print Bill</button>
                             </div>
@@ -121,7 +120,7 @@
 
 
                                 {{-- 1 --}}
-                                <div class="col-5 col-xl-6">
+                                <div class="col-6 col-xl-9">
                                     <div class="card card-plain h-100">
                                         <div class="card-body p-3">
                                             <div class="table-responsive border rounded">
@@ -155,16 +154,6 @@
                                                     </tbody>
                                                 </table>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- 2 --}}
-                                <div class="col-4 col-xl-3 ml-4">
-                                    <div class="card card-plain h-100">
-                                        <div class="card-body p-3">
-                                            <hr class="horizontal gray-light my-4">
-                                            <h4>Meal Course</h4>
-                                            {{-- code here --}}
                                         </div>
                                     </div>
                                 </div>
