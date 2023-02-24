@@ -131,7 +131,7 @@ class PageController extends Controller
         $member = memberModel::find($request->member_id);
         $member->course()->attach($request->exercises);
         Alert::success('Added', 'Exercises Added To Member Successfully');
-        return redirect('/buildingCourse');
+        return redirect('/buildingCourse/searchExercise');
     }
 
     // exercise detail
@@ -198,7 +198,7 @@ class PageController extends Controller
     {
         DB::table('member_course')->where('member_id', $userId)->where('course_id', $courseId)->delete();
         Alert::success('Deleted', 'Exercises Has Been Deleted');
-        return \back()->with('success', 'Exercises deleted successfully');
+        return \back();
     }
 
     public function findMe()
