@@ -32,7 +32,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/addMember', [App\Http\Controllers\PageController::class, 'addMember']);
     Route::get('/memberTable', [App\Http\Controllers\PageController::class, 'memberTable']);
     Route::get('/billing', [App\Http\Controllers\PageController::class, 'billing']);
-    Route::get('/trainer',[App\Http\Controllers\trainerController::class, 'trainer']);
+
     Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
     Route::get('/Calculator', [App\Http\Controllers\PageController::class, 'Calculator']);
     Route::get('/findMe', [App\Http\Controllers\PageController::class, 'findMe']);
@@ -65,12 +65,16 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     //search for exercise
     Route::get('/buildingCourse/searchExercise', [App\Http\Controllers\PageController::class, 'searchExercise']);
-    // anything that deals with billing table
 
-    // insert exercise
+
     Route::post('/insertExercise', [App\Http\Controllers\PageController::class, 'insertExercise']);
-    // add exercise to member
     Route::post('/add_exercise', [App\Http\Controllers\PageController::class, 'addExercise']);
-    // route to exercise detail
     Route::get('/buildingCourse/exerciseDetail/{id}', [App\Http\Controllers\PageController::class, 'exerciseDetail']);
+
+
+    // trainer routes
+    Route::get('/trainer', [App\Http\Controllers\trainerController::class, 'trainer']);
+    Route::post('/insertTrainer', [App\Http\Controllers\trainerController::class, 'insertTrainer']);
+    Route::get('/deleteTrainer/{id}', [App\Http\Controllers\trainerController::class, 'deleteTrainer']);
+    Route::get('/editTrainer/{id}', [App\Http\Controllers\trainerController::class, 'editTrainer']);
 });

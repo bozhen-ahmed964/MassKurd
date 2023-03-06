@@ -30,7 +30,6 @@
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
-
                             </select>
                         </label>
                     </div>
@@ -69,7 +68,6 @@
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
                                 <option value="30,000">30,000 IQD</option>
                                 <option value="90,000">90,000 IQD</option>
-
                             </select>
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> End Date :<br>
