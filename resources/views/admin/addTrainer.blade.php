@@ -14,7 +14,7 @@
                 @csrf
                 <div class="row">
                     <div class="col-3">
-                        <label class="form-label" style="color:rgb(0, 0, 0);"> Full Name :&nbsp;
+                        <label class="form-label" style="color:rgb(0, 0, 0);"> Trainer Name :&nbsp;
                             <input class="form-control form-control-lg shadow-dark form-outline" type="text"
                                 style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="Trainer_Name" required="">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <button class="btn btn-success btn-lg" type="submit"
-                    style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Add Trainer
+                    style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Add Trainer +
                 </button>
             </form>
         </div>
@@ -61,14 +61,14 @@
                             <div>
                                 <div class="py-4">
                                     <h4>{{ $trainerss->Trainer_Name }}</h4>
-                                    <p>Gender : {{ $trainerss->Gender }}</p>
-                                    <p>Age : {{ $trainerss->Age }}</p>
-                                    <p>Phone_No : {{ $trainerss->Phone_Number }}</p>
-                                    <p>Pay : {{ $trainerss->Pay }}</p>
-                                    <p>Added At  : {{ $trainerss->created_at }}</p>
+                                    <p><strong class="text-dark">Gender :</strong> {{ $trainerss->Gender }}</p>
+                                    <p><strong class="text-dark">Age :</strong> {{ $trainerss->Age }}</p>
+                                    <p><strong class="text-dark">Phone_No :</strong> {{ $trainerss->Phone_Number }}</p>
+                                    <p><strong class="text-dark">Pay :</strong> {{ $trainerss->Pay }} IQD</p>
+                                    <p><strong class="text-dark">Join Date :</strong> {{ $trainerss->created_at }}</p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-dark" type="button">Update</button>
+
                                     <a href="{{ url('deleteTrainer/' . $trainerss->id) }}"
                                         class="btn btn-primary btn-lg">Delete</a>
                                 </div>

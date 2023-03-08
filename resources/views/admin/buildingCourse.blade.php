@@ -48,6 +48,7 @@
                     style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Add New Exercise
                 </button>
             </form>
+            <h3 class="text-dark mt-5">Search For Exercise</h3>
             <form type="get" action="{{ url('/buildingCourse/searchExercise') }}">
                 <label class="form-label" style="color:rgb(0, 0, 0);"> Primary Muscle :&nbsp;
                     <Select
@@ -70,7 +71,7 @@
                     </Select>
                 </label>
                 <button class="btn btn-dark btn-lg" type="submit"
-                    style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Search for Muscle
+                    style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Search
                 </button>
             </form>
         </div>
