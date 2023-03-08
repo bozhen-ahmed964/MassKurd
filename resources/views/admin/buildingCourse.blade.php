@@ -10,7 +10,7 @@
                     <h3 class="text-white text-capitalize ps-3 ">Building Course</h3>
                 </div>
             </div>
-
+            <h3 class="text-dark mt-5">Add New Exercise</h3>
             <form action="{{ url('insertExercise') }}" method="post">
                 @csrf
                 <label class="form-label" style="color:rgb(0, 0, 0);"> Exercise Name :&nbsp;
