@@ -29,47 +29,38 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\PageController::class, 'index']);
-    Route::get('/addMember', [App\Http\Controllers\PageController::class, 'addMember']);
-    Route::get('/memberTable', [App\Http\Controllers\PageController::class, 'memberTable']);
     Route::get('/billing', [App\Http\Controllers\PageController::class, 'billing']);
-
-    Route::get('/buildingCourse', [App\Http\Controllers\PageController::class, 'buildingCourse']);
     Route::get('/Calculator', [App\Http\Controllers\PageController::class, 'Calculator']);
     Route::get('/findMe', [App\Http\Controllers\PageController::class, 'findMe']);
-
-
-
-
-
     Route::post('/Calculator', [App\Http\Controllers\PageController::class, 'calCalculator'])->name('Calculator');
 
 
 
-    // profile routes
-    Route::get('memberTable/profile/{id}', [App\Http\Controllers\PageController::class, 'profile']);
-    Route::delete('memberTable/profile/{userId}/{courseId}', [App\Http\Controllers\PageController::class, 'destroyProfile'])->name('destroyProfile');
-
-    // anything that deals with member table
-    Route::post('/insertMember', [App\Http\Controllers\PageController::class, 'insertMember']);
-
-    // edit user button
-    Route::get('/edit-member/{id}', [App\Http\Controllers\PageController::class, 'editMember']);
-    Route::put('/update-member/{id}', [App\Http\Controllers\PageController::class, 'updateFunction']);
-    // delete button
-    Route::delete('/delete-member/{id}', [App\Http\Controllers\PageController::class, 'destroyProfile']);
-    Route::get('/delete-member/{id}', [App\Http\Controllers\PageController::class, 'destroy']);
-    // filter buttons
-    Route::get('/memberTable/sort_By_Name', [\App\Http\Controllers\PageController::class, 'sortName']);
-    Route::get('/memberTable/sort_By_Gender', [\App\Http\Controllers\PageController::class, 'sortGender']);
 
 
-    //search for exercise
-    Route::get('/buildingCourse/searchExercise', [App\Http\Controllers\PageController::class, 'searchExercise']);
+    //search and adding exercise
+    Route::get('/buildingCourse', [App\Http\Controllers\exerciseController::class, 'buildingCourse']);
+    Route::get('/buildingCourse/searchExercise', [App\Http\Controllers\exerciseController::class, 'searchExercise']);
+    Route::post('/insertExercise', [App\Http\Controllers\exerciseController::class, 'insertExercise']);
+    Route::post('/add_exercise', [App\Http\Controllers\exerciseController::class, 'addExercise']);
+    Route::get('/buildingCourse/exerciseDetail/{id}', [App\Http\Controllers\exerciseController::class, 'exerciseDetail']);
 
 
-    Route::post('/insertExercise', [App\Http\Controllers\PageController::class, 'insertExercise']);
-    Route::post('/add_exercise', [App\Http\Controllers\PageController::class, 'addExercise']);
-    Route::get('/buildingCourse/exerciseDetail/{id}', [App\Http\Controllers\PageController::class, 'exerciseDetail']);
+
+    // member routes
+    Route::get('/addMember', [App\Http\Controllers\memberController::class, 'addMember']);
+    Route::get('/memberTable', [App\Http\Controllers\memberController::class, 'memberTable']);
+    Route::get('memberTable/profile/{id}', [App\Http\Controllers\memberController::class, 'profile']);
+    Route::delete('memberTable/profile/{userId}/{courseId}', [App\Http\Controllers\memberController::class, 'destroyProfile'])->name('destroyProfile');
+    Route::post('/insertMember', [App\Http\Controllers\memberController::class, 'insertMember']);
+    Route::get('/edit-member/{id}', [App\Http\Controllers\memberController::class, 'editMember']);
+    Route::put('/update-member/{id}', [App\Http\Controllers\memberController::class, 'updateFunction']);
+    Route::delete('/delete-member/{id}', [App\Http\Controllers\memberController::class, 'destroyProfile']);
+    Route::get('/delete-member/{id}', [App\Http\Controllers\memberController::class, 'destroy']);
+    Route::get('/memberTable/sort_By_Name', [\App\Http\Controllers\memberController::class, 'sortName']);
+    Route::get('/memberTable/sort_By_Gender', [\App\Http\Controllers\memberController::class, 'sortGender']);
+
+
 
 
     // trainer routes

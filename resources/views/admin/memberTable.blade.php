@@ -45,7 +45,7 @@
                                 <td>{{ $item->updated_at }}</td>
                                 <td>
                                     <button
-                                        class="{{ $item->created_at < $item->updated_at ? 'btn btn-success' : 'btn btn-dark' }}"
+                                        class="{{ $item->created_at < $item->updated_at ? 'btn btn-success btn-sm' : 'btn btn-dark btn-sm' }}"
                                         {{ $item->created_at >= $item->updated_at ? 'disabled' : '' }}>
                                         {{ $item->created_at < $item->updated_at ? 'Active' : 'Deactive' }}
                                     </button>

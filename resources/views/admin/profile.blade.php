@@ -72,6 +72,9 @@
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">Game Type:</strong> &nbsp;
                                                     {{ $profileData->Game_Type }}</li>
+                                                <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
+                                                        class="text-dark">Trainer Name :</strong> &nbsp;
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
