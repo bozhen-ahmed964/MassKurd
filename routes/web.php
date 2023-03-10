@@ -32,7 +32,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/billing', [App\Http\Controllers\PageController::class, 'billing']);
     Route::get('/Calculator', [App\Http\Controllers\PageController::class, 'Calculator']);
     Route::get('/findMe', [App\Http\Controllers\PageController::class, 'findMe']);
-    Route::post('/Calculator', [App\Http\Controllers\PageController::class, 'calCalculator'])->name('Calculator');
+    
 
 
 

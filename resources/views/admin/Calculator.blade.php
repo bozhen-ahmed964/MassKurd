@@ -137,48 +137,45 @@
                     </h2>
                 </div>
                 <div class="text-center my-4">
-                    <form action="{{ url('/Calculator') }}" method="post">
-                        @csrf
-                        <label class="form-label" style="color:rgb(0, 0, 0);"> Gender :&nbsp;
+                    <label class="form-label" style="color:rgb(0, 0, 0);"> Gender :&nbsp;
+                        <input class="form-control form-control-lg shadow-dark form-outline" type="text"
+                            placeholder="male or female"
+                            style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                            id="genderInput">
+                    </label>
+                    <label class="form-label" style="color:rgb(0, 0, 0);"> Age :&nbsp;
+                        <input class="form-control form-control-lg shadow-dark form-outline" type="text"
+                            placeholder="Age"
+                            style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                            id="ageInput">
+                    </label>
+                    <label class="form-label" style="color:rgb(0, 0, 0);"> Weight :&nbsp;
+                        <input class="form-control form-control-lg shadow-dark form-outline" type="text"
+                            placeholder="Weight (KG)"
+                            style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
+                            id="weightInput">
+                    </label>
+                    <div class="col">
+                        <label class="form-label" style="color:rgb(0, 0, 0);"> Heart Rate :&nbsp;
                             <input class="form-control form-control-lg shadow-dark form-outline" type="text"
-                                placeholder="Gender"
+                                placeholder="Heart Rate"
                                 style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
-                                name="gender" required="">
+                                id="heartRateInput">
                         </label>
-                        <label class="form-label" style="color:rgb(0, 0, 0);"> Age :&nbsp;
+                        <label class="form-label" style="color:rgb(0, 0, 0);"> Duration :&nbsp;
                             <input class="form-control form-control-lg shadow-dark form-outline" type="text"
-                                placeholder="Age"
+                                placeholder="Duration (Minutes)"
                                 style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
-                                name="age" required="">
+                                id="timeInput">
                         </label>
-                        <label class="form-label" style="color:rgb(0, 0, 0);"> Weight :&nbsp;
-                            <input class="form-control form-control-lg shadow-dark form-outline" type="text"
-                                placeholder="Weight"
-                                style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
-                                name="weight" required="">
-                        </label>
-                        <div class="col">
-                            <label class="form-label" style="color:rgb(0, 0, 0);"> Heart Rate :&nbsp;
-                                <input class="form-control form-control-lg shadow-dark form-outline" type="text"
-                                    placeholder="Heart Rate"
-                                    style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
-                                    name="weight" required="">
-                            </label>
-                            <label class="form-label" style="color:rgb(0, 0, 0);"> Duration :&nbsp;
-                                <input class="form-control form-control-lg shadow-dark form-outline" type="text"
-                                    placeholder="Duration (Minutes))"
-                                    style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
-                                    name="weight" required="">
-                            </label>
-                            <button class="btn btn-success btn-lg" type="submit"
-                                style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Calculate
-                            </button>
-                        </div>
-                    </form>
+                        <button onclick="calculateCaloriesBurned();" class="btn btn-success btn-lg" type="submit"
+                            style="margin-left: 15px;margin-top:15px;border-radius: 20px;">Calculate
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="text-center my-4">
-                <h3>Result Here</h3>
+                <h3 id="result"></h3>
             </div>
             {{-- Info Table --}}
             <table class="table my-6">
@@ -210,3 +207,27 @@
         </div>
     </div>
 @endsection
+
+<script>
+    function calculateCaloriesBurned() {
+
+
+        // inputs
+        const heartRate = parseFloat(document.getElementById('heartRateInput').value);
+        const weight = parseFloat(document.getElementById('weightInput').value);
+        const time = parseFloat(document.getElementById('timeInput').value);
+        const gender = document.getElementById('genderInput').value;
+        const age = parseFloat(document.getElementById('ageInput').value);
+
+
+        // calculate
+        const caloriesPerMinute = (gender === 'male') ? (-55.0969 + (0.6309 * heartRate) + (0.1988 * weight) + (0.2017 *
+                age)) / 4.184 :
+            (-20.4022 + (0.4472 * heartRate) - (0.1263 * weight) + (0.074 * age)) / 4.184;
+
+        const caloriesBurned = caloriesPerMinute * time;
+
+        // output
+        document.getElementById('result').innerText = `Calories burned: ${caloriesBurned.toFixed(2)}`;
+    }
+</script>
