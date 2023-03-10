@@ -28,8 +28,8 @@
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Gender :&nbsp;<br>
                             <select name="Gender" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
                             </select>
                         </label>
                     </div>

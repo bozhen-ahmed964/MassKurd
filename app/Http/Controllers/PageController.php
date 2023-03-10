@@ -10,11 +10,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class PageController extends Controller
 {
-    // route to dashboard page
-    public function index()
-    {
-        return view('admin.index');
-    }
 
     // route to balling page
     public function billing()

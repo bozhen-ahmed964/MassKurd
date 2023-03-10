@@ -11,8 +11,72 @@
                 </div>
             </div>
             <div class="container-fluid py-4">
+                {{-- first row --}}
                 <div class="row">
-                    {{-- 1 --}}
+                    {{-- Total Member --}}
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                        <div class="card shadow-dark">
+                            <div class="card-header p-3 pt-2">
+                                <div
+                                    class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                                    <i class="material-icons opacity-10">person</i>
+                                </div>
+                                <div class="text-end pt-1">
+                                    <strong class="text-sm mb-0 text-capitalize">Total Member</strong>
+                                    <h4 class="mb-0">{{ $totalMember }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Total Male Member --}}
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                        <div class="card shadow-dark">
+                            <div class="card-header p-3 pt-2">
+                                <div
+                                    class="icon icon-lg icon-shape bg-gradient-primary shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                                    <i class="material-icons opacity-10">person</i>
+                                </div>
+                                <div class="text-end pt-1">
+                                    <strong class="text-sm mb-0 text-capitalize">Total Male Member</strong>
+                                    <h4 class="mb-0">{{ $totalMaleMember }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Total Female Member --}}
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                        <div class="card shadow-dark">
+                            <div class="card-header p-3 pt-2">
+                                <div
+                                    class="icon icon-lg icon-shape bg-gradient-success shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                                    <i class="material-icons opacity-10">person</i>
+                                </div>
+                                <div class="text-end pt-1">
+                                    <strong class="text-sm mb-0 text-capitalize">Total Female Member</strong>
+                                    <h4 class="mb-0">{{ $totalFemaleMember }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Total Trainer --}}
+                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                        <div class="card shadow-dark">
+                            <div class="card-header p-3 pt-2">
+                                <div
+                                    class="icon icon-lg icon-shape bg-gradient-warning shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                                    <i class="material-icons opacity-10">person</i>
+                                </div>
+                                <div class="text-end pt-1">
+                                    <strong class="text-sm mb-0 text-capitalize">Total Trainer</strong>
+                                    <h4 class="mb-0">{{ $totalTrainer }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- second row --}}
+                <div class="row mt-5">
+                    {{-- Total Exercise Number --}}
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                         <div class="card shadow-dark">
                             <div class="card-header p-3 pt-2">
@@ -21,74 +85,54 @@
                                     <i class="material-icons opacity-10">weekend</i>
                                 </div>
                                 <div class="text-end pt-1">
-                                    <p class="text-sm mb-0 text-capitalize">Today's Money</p>
-                                    <h4 class="mb-0">$53k</h4>
+                                    <strong class="text-sm mb-0 text-capitalize">Total Exercise Number</strong>
+                                    <h4 class="mb-0">{{ $totalExerciseNumber }}</h4>
                                 </div>
-                            </div>
-                            <hr class="dark horizontal my-0">
-                            <div class="card-footer p-3">
-                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than
-                                    last week</p>
                             </div>
                         </div>
                     </div>
-                    {{-- 2 --}}
+                    {{-- Total Male Member --}}
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                         <div class="card shadow-dark">
                             <div class="card-header p-3 pt-2">
                                 <div
                                     class="icon icon-lg icon-shape bg-gradient-primary shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                                    <i class="material-icons opacity-10">weekend</i>
+                                    <i class="material-icons opacity-10">euro</i>
                                 </div>
                                 <div class="text-end pt-1">
-                                    <p class="text-sm mb-0 text-capitalize">Today's Money</p>
-                                    <h4 class="mb-0">$53k</h4>
+                                    <strong class="text-sm mb-0 text-capitalize">Total Income</strong>
+                                    <h4 class="mb-0">55</h4>
                                 </div>
-                            </div>
-                            <hr class="dark horizontal my-0">
-                            <div class="card-footer p-3">
-                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than
-                                    last week</p>
                             </div>
                         </div>
                     </div>
-                    {{-- 3 --}}
+                    {{-- Total Female Member --}}
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                         <div class="card shadow-dark">
                             <div class="card-header p-3 pt-2">
                                 <div
                                     class="icon icon-lg icon-shape bg-gradient-success shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                                    <i class="material-icons opacity-10">weekend</i>
+                                    <i class="material-icons opacity-10">person</i>
                                 </div>
                                 <div class="text-end pt-1">
-                                    <p class="text-sm mb-0 text-capitalize">Today's Money</p>
-                                    <h4 class="mb-0">$53k</h4>
+                                    <strong class="text-sm mb-0 text-capitalize">Total Female Member</strong>
+                                    <h4 class="mb-0">25</h4>
                                 </div>
-                            </div>
-                            <hr class="dark horizontal my-0">
-                            <div class="card-footer p-3">
-                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than
-                                    last week</p>
                             </div>
                         </div>
                     </div>
-                    {{-- 4 --}}
+                    {{-- Total Trainer --}}
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                         <div class="card shadow-dark">
                             <div class="card-header p-3 pt-2">
                                 <div
                                     class="icon icon-lg icon-shape bg-gradient-warning shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                                    <i class="material-icons opacity-10">weekend</i>
+                                    <i class="material-icons opacity-10">person</i>
                                 </div>
                                 <div class="text-end pt-1">
-                                    <p class="text-sm mb-0 text-capitalize">Today's Money</p>
-                                    <h4 class="mb-0">$53k</h4>
+                                    <strong class="text-sm mb-0 text-capitalize">Total Trainer</strong>
+                                    <h4 class="mb-0">2</h4>
                                 </div>
-                            </div>
-                            <hr class="dark horizontal my-0">
-                            <div class="card-footer p-3">
-                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than
-                                    last week</p>
                             </div>
                         </div>
                     </div>
