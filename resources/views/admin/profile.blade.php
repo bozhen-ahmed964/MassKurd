@@ -72,9 +72,6 @@
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">Game Type:</strong> &nbsp;
                                                     {{ $profileData->Game_Type }}</li>
-                                                <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
-                                                        class="text-dark">Trainer Name :</strong> &nbsp;
-                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -105,8 +102,8 @@
                         <div class="row">
                             <div class="col-6">
                                 <a href="{{ url('/buildingCourse') }}" class="btn btn-dark btn-lg">Get Training Course</a>
-                                <button class="btn btn-primary btn-lg">Print Course</button>
-                                <button class="btn btn-primary btn-lg">Print Bill</button>
+                                <a href="{{ url('/memberTable/profile/{id}/bill') }}" class="btn btn-primary btn-lg">Print
+                                    Bill</a>
                             </div>
                         </div>
                     </div>
