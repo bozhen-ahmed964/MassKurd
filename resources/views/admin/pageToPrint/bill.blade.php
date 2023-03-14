@@ -19,11 +19,25 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="/admin/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+
+    <style>
+        p {
+            color: black;
+        }
+
+        tr {
+            color: black;
+        }
+
+        h4 {
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1 style="font-weight: bold;font-size: 30px;padding: 20px;">Company Name</h1>
+    <h1 style="font-weight: bold;font-size: 30px;padding: 20px; color:#262626">Company Name</h1>
     <div style="height: 180px;background: #c5c5c5;">
         <div class="container">
             <div class="row">
