@@ -32,11 +32,16 @@
         h4 {
             color: black;
         }
+
+        @media print {
+            #print-button {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
-
     <h1 style="font-weight: bold;font-size: 30px;padding: 20px; color:#262626">Company Name</h1>
     <div style="height: 180px;background: #c5c5c5;">
         <div class="container">
@@ -106,7 +111,7 @@
         <p>TEST@GMAIL.COM</p>
         <p style="margin-left: 12px;">+964 770 111 2222</p>
     </div>
-
+    <button id="print-button" class="btn btn-primary btn-lg mt-5 mx-5" onclick="window.print()">Print</button>
 
 
     <!-- Scripts -->
