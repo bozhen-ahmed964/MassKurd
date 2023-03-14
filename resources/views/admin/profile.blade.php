@@ -102,8 +102,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <a href="{{ url('/buildingCourse') }}" class="btn btn-dark btn-lg">Get Training Course</a>
-                                <a href="{{ url('/memberTable/profile/{id}/bill') }}" class="btn btn-primary btn-lg">Print
-                                    Bill</a>
+                                <a href="{{ url('bill/' . $profileData->id) }}" class="btn btn-primary btn-lg">Print Bill</a>
                             </div>
                         </div>
                     </div>

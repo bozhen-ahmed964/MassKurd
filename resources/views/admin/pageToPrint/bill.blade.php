@@ -42,16 +42,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6" style="margin-top: 25px;">
-                    <p style="height: 6px;font-size: 14px;">to</p>
-                    <p style="height: 6px;font-size: 18px;font-weight: bold;">Costumer Name</p>
-                    <p style="height: 6px;">Gender</p>
-                    <p style="height: 6px;">Age</p>
-                    <p style="height: 6px;">Phone Number</p>
+
+                    <p style="height: 6px;font-size: 18px;font-weight: bold;">Full Name : {{ $profileData->Full_Name }}
+                    </p>
+                    <p style="height: 6px;">Gender : {{ $profileData->Gender }}</p>
+                    <p style="height: 6px;">Age : {{ $profileData->Age }}</p>
+                    <p style="height: 6px;">Phone Number : {{ $profileData->Phone_Number }}</p>
                 </div>
                 <div class="col-md-6" style="text-align: right;margin-top: 25px;">
                     <p style="height: 6px;font-weight: bold;font-size: 18px;">Admin Name</p>
-                    <p style="height: 6px;font-weight: bold;">Start Date</p>
-                    <p style="height: 6px;font-weight: bold;">End Date</p>
+                    <p style="height: 6px;font-weight: bold;">Start : {{ $profileData->created_at }}</p>
+                    <p style="height: 6px;font-weight: bold;">End : {{ $profileData->updated_at }}</p>
                     <p style="height: 6px;margin-top: 45px;">Signature</p>
                 </div>
             </div>
@@ -63,7 +64,7 @@
                 style="width: 690px;background: #c5c5c5;text-align: center;margin-left: 30px;">
                 <div style="width: 300px;">
                     <p>Month Pay </p>
-                    <h4>40,000 IQD</h4>
+                    <h4>{{ $profileData->Pay }} IQD</h4>
                 </div>
                 <div style="width: 300px;">
                     <p>Course Pay</p>
@@ -86,20 +87,16 @@
                     <th>Times</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Cell 1</td>
-                    <td>Cell 2</td>
-                    <td>Cell 3</td>
-                    <td>Cell 4</td>
-                </tr>
-                <tr>
-                    <td>Cell 3</td>
-                    <td>Cell 4</td>
-                    <td>Cell 3</td>
-                    <td>Cell 4</td>
-                </tr>
-            </tbody>
+            @foreach ($profileData->course as $index => $course)
+                <tbody>
+                    <tr>
+                        <td>{{ $course->Exercise_Name }}</td>
+                        <td>{{ $course->Primary_Muscle }}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            @endforeach
         </table>
     </div>
     <hr />

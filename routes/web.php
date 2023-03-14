@@ -36,8 +36,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
 
     // bill & courseTemplate routes
-    Route::get('/memberTable/profile/{id}/bill', [App\Http\Controllers\printController::class, 'bill']);
-    
+    Route::get('bill/{id}', [App\Http\Controllers\printController::class, 'bill']);
+
 
 
 
