@@ -78,7 +78,7 @@
     </div>
 
 
-    <div class="card my-4">
+    <div class="card my-5">
         <div class="card-body shadow-dark">
             <div class="container py-4 py-xl-5">
                 <form action="{{ url('add_exercise') }}" method="post">
