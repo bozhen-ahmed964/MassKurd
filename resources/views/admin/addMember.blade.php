@@ -66,8 +66,8 @@
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Pay :<br>
                             <select name="Pay" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
-                                <option value=" 1 Month 30,000"> 1 Month 30,000 IQD</option>
-                                <option value=" 3 Month 90,000"> 3 Month 90,000 IQD</option>
+                                <option value="30,000"> 1 Month 30,000 IQD</option>
+                                <option value="90,000"> 3 Month 90,000 IQD</option>
                             </select>
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Course Pay :<br>
