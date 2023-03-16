@@ -73,12 +73,12 @@
                 </div>
                 <div style="width: 300px;">
                     <p>Course Pay</p>
-                    <h4>40,000 IQD</h4>
+                    <h4>{{ $profileData->Course_Pay }} IQD</h4>
                 </div>
             </div>
             <div class="col-md-6" style="width: 365px;background: #262626;">
                 <p style="color: rgb(255,255,255);font-size: 19px;">TOTAL</p>
-                <h1 style="text-align: right;color: rgb(255,255,255);">450,000 IQD</h1>
+                <h1 style="text-align: right;color: rgb(255,255,255);">{{ $totalPay }} IQD</h1>
             </div>
         </div>
     </div>
