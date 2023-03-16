@@ -28,6 +28,7 @@ class memberController extends Controller
         $member->Height = $request->input('Height');
         $member->Game_Type = $request->input('Game_Type');
         $member->Pay = $request->input('Pay');
+        $member->Course_Pay = $request->input('Course_Pay');
         $member->updated_at = $request->input('end_at');
         $member->save();
         Alert::success('Added', 'Member Added Successfully');
@@ -57,6 +58,7 @@ class memberController extends Controller
         $member->Height = $request->input('Height');
         $member->Game_Type = $request->input('Game_Type');
         $member->Pay = $request->input('Pay');
+        $member->Course_Pay = $request->input('Course_Pay');
         $member->updated_at = $request->input('end_at');
         $member->update();
         Alert::success('Info', 'Info Updated Successfully');

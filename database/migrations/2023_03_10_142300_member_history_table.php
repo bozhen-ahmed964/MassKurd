@@ -19,8 +19,10 @@ return new class extends Migration
             $table->string('Full_Name');
             $table->Integer('Age');
             $table->string('Gender');
+            $table->string('Game_Type');
             $table->string('Phone_Number');
             $table->string('Pay');
+            $table->string('Course_Pay')->default(0);
             $table->timestamps();
         });
 
@@ -29,8 +31,8 @@ return new class extends Migration
             BEFORE DELETE ON add_member_table
             FOR EACH ROW
             BEGIN
-                INSERT INTO member_history_table (Full_Name, Age, Gender, Phone_Number, Pay, created_at, updated_at)
-                VALUES (OLD.Full_Name, OLD.Age, OLD.Gender, OLD.Phone_Number, OLD.Pay, OLD.created_at, OLD.updated_at);
+                INSERT INTO member_history_table (Full_Name, Age, Gender, Game_Type, Phone_Number, Pay, Course_Pay, created_at, updated_at)
+                VALUES (OLD.Full_Name, OLD.Age, OLD.Gender, OLD.Game_Type, OLD.Phone_Number, OLD.Pay, OLD.Course_Pay, OLD.created_at, OLD.updated_at);
             END;
         ');
     }

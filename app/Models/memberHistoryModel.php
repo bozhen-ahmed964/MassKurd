@@ -14,7 +14,9 @@ class memberHistoryModel extends Model
         'Age',
         'Gender',
         'Phone_Number',
+        'Game_Type',
         'Pay',
+        'Course_Pay',
         'created_at',
         'updated_at',
     ];

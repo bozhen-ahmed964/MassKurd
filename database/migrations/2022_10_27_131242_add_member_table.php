@@ -24,6 +24,7 @@ return new class extends Migration
                 $table->string('Height');
                 $table->string('Game_Type');
                 $table->string('Pay');
+                $table->string('Course_Pay')->default(0);
                 $table->timestamps();
             });
         }

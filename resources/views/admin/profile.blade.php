@@ -86,6 +86,9 @@
                                                         class="text-dark">Pay:</strong> &nbsp; {{ $profileData->Pay }}IQD
                                                 </li>
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
+                                                        class="text-dark">Course Pay:</strong> &nbsp; {{ $profileData->Course_Pay }}IQD
+                                                </li>
+                                                <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">Start Date:</strong> &nbsp;
                                                     {{ $profileData->created_at }}</li>
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
