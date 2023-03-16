@@ -52,6 +52,7 @@
                     </p>
                     <p style="height: 6px;">Gender : {{ $profileData->Gender }}</p>
                     <p style="height: 6px;">Age : {{ $profileData->Age }}</p>
+                    <p style="height: 6px;">Age : {{ $profileData->Game_Type }}</p>
                     <p style="height: 6px;">Phone Number : {{ $profileData->Phone_Number }}</p>
                 </div>
                 <div class="col-md-6" style="text-align: right;margin-top: 25px;">
