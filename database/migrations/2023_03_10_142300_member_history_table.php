@@ -28,7 +28,7 @@ return new class extends Migration
 
         DB::unprepared('
             CREATE TRIGGER member_delete_trigger
-            BEFORE DELETE ON add_member_table
+            AFTER INSERT ON add_member_table
             FOR EACH ROW
             BEGIN
                 INSERT INTO member_history_table (Full_Name, Age, Gender, Game_Type, Phone_Number, Pay, Course_Pay, created_at, updated_at)
