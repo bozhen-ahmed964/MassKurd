@@ -26,6 +26,11 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="/admin/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
 
+    <style>
+    span {
+        font-size: 20px;
+    }
+</style>
 </head>
 
 

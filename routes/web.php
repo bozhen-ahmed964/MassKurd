@@ -29,7 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\dashboardController::class, 'index']);
-    Route::get('/billing', [App\Http\Controllers\PageController::class, 'billing']);
+    Route::get('/billing', [App\Http\Controllers\billController::class, 'billing']);
     Route::get('/Calculator', [App\Http\Controllers\PageController::class, 'Calculator']);
     Route::get('/findMe', [App\Http\Controllers\PageController::class, 'findMe']);
 

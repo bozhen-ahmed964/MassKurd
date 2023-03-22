@@ -11,12 +11,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 class PageController extends Controller
 {
 
-    // route to balling page
-    public function billing()
-    {
-        return view('admin.billing');
-    }
-
     // route to calCalculator page
     public function Calculator()
     {
