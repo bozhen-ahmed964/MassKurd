@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\memberHistoryModel;
 use Illuminate\Http\Request;
+use App\Models\memberHistoryModel;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class billController extends Controller
 {
@@ -16,5 +17,11 @@ class billController extends Controller
     }
 
     // delete memberHistory btn
-    
+    public function memberHistoryDelete($id)
+    {
+        $memberHistory = memberHistoryModel::find($id);
+        $memberHistory->delete();
+        Alert::success('Deleted', 'Member History Deleted Successfully');
+        return redirect('/billing');
+    }
 }

@@ -29,9 +29,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\dashboardController::class, 'index']);
-    Route::get('/billing', [App\Http\Controllers\billController::class, 'billing']);
     Route::get('/Calculator', [App\Http\Controllers\PageController::class, 'Calculator']);
     Route::get('/findMe', [App\Http\Controllers\PageController::class, 'findMe']);
+
+
 
 
 
@@ -40,6 +41,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
 
 
+    Route::get('/billing', [App\Http\Controllers\billController::class, 'billing']);
+    Route::get('/billing/delete/{id}', [App\Http\Controllers\billController::class, 'memberHistoryDelete']);
 
 
     //search and adding exercise
