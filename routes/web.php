@@ -75,4 +75,13 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('/insertTrainer', [App\Http\Controllers\trainerController::class, 'insertTrainer']);
     Route::get('/deleteTrainer/{id}', [App\Http\Controllers\trainerController::class, 'deleteTrainer']);
     Route::get('/editTrainer/{id}', [App\Http\Controllers\trainerController::class, 'editTrainer']);
+
+
+
+
+    Route::get('/settings', [App\Http\Controllers\settingController::class, 'setting']);
+    Route::get('/settings/deleteActiveMember', [App\Http\Controllers\settingController::class, 'deleteActiveMember']);
+    Route::get('/settings/deleteHistoryMember', [App\Http\Controllers\settingController::class, 'deleteHistoryMember']);
+    Route::get('/settings/deleteExercise', [App\Http\Controllers\settingController::class, 'deleteExercise']);
+    
 });
