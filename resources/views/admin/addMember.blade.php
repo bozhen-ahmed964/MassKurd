@@ -74,6 +74,7 @@
                             <select name="Course_Pay" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
                                 <option value="5000"> Exercise Course 5,000 IQD</option>
+                                <option value="10000"> Exercise Course 10,000 IQD</option>
                             </select>
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> End Date :<br>

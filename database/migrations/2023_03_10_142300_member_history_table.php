@@ -26,9 +26,15 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        DB::unprepared('CREATE TRIGGER `copy_table_trigger` AFTER INSERT ON `add_member_table` FOR EACH ROW
-            INSERT INTO `member_history_table` (`Full_Name`, `Age`, `Gender`, `Game_Type`, `Phone_Number`, `Pay`, `Course_Pay`, `created_at`, `updated_at`)
-            VALUES (NEW.Full_Name, NEW.Age, NEW.Gender, NEW.Game_Type, NEW.Phone_Number, NEW.Pay, NEW.Course_Pay ,NEW.created_at, NEW.updated, NOW(), NOW())');
+        DB::unprepared('
+             CREATE TRIGGER member_delete_trigger
+             BEFORE DELETE ON add_member_table
+             FOR EACH ROW
+             BEGIN
+                 INSERT INTO member_history_table (Full_Name, Age, Gender, Game_Type, Phone_Number, Pay, Course_Pay, created_at, updated_at)
+                VALUES (OLD.Full_Name, OLD.Age, OLD.Gender, OLD.Game_Type, OLD.Phone_Number, OLD.Pay, OLD.Course_Pay, OLD.created_at, OLD.updated_at);
+            END;
+        ');
     }
 
     /**
@@ -38,7 +44,7 @@ return new class extends Migration
      */
     public function down()
     {
-        DB::unprepared('DROP TRIGGER IF EXISTS copy_table_trigger');
+        DB::unprepared('DROP TRIGGER IF EXISTS member_delete_trigger');
         Schema::dropIfExists('member_history_table');
     }
 };

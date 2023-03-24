@@ -22,7 +22,6 @@
                 <table class="table table-hover shadow-dark align-items-center">
                     <thead style="font-size:18px;background-color:#494949d5;color:white;">
                         <tr>
-                            <th>ID</th>
                             <th>Full Name</th>
                             <th>Age</th>
                             <th>Gender</th>
@@ -36,7 +35,6 @@
                     <tbody style="font-weight: bold; font-size:20px; text-align:center; color:black;">
                         @foreach ($memberTable as $item)
                             <tr>
-                                <td>{{ $item->id }}</td>
                                 <td style="text-align:left">{{ $item->Full_Name }}</td>
                                 <td>{{ $item->Age }}</td>
                                 <td>{{ $item->Gender }}</td>

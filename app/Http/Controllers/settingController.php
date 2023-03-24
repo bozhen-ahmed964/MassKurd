@@ -20,7 +20,7 @@ class settingController extends Controller
     //deleting all active member
     public function deleteActiveMember()
     {
-        DB::table('add_member_table')->truncate();
+        DB::table('add_member_table')->delete();
         Alert::success('Success', 'All Active Member Deleted');
         return redirect()->back();
     }
@@ -29,7 +29,7 @@ class settingController extends Controller
     //deleting all histoy member
     public function deleteHistoryMember()
     {
-        DB::table('member_history_table')->truncate();
+        DB::table('member_history_table')->delete();
         Alert::success('Success', 'All History Member Deleted');
         return redirect()->back();
     }
@@ -38,7 +38,7 @@ class settingController extends Controller
     //deleting all exercise
     public function deleteExercise()
     {
-        DB::table('course_table')->truncate();
+        DB::table('course_table')->delete();
         Alert::success('Success', 'All Exercise Deleted');
         return redirect()->back();
     }
