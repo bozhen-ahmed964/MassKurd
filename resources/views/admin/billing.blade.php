@@ -16,7 +16,8 @@
                                     </div>
                                 </div>
                                 <div class="card-body pt-0 p-3 text-center">
-                                    <h6 class="text-center mb-0" style="font-size: 24px;">Total Member Salaray By This Month</h6>
+                                    <h6 class="text-center mb-0" style="font-size: 24px;">Total Member Salaray By This Month
+                                    </h6>
                                     <span class="text-xs">Belong Interactive</span>
                                     <hr class="horizontal dark my-3">
                                     <h5 class="mb-0" style="font-size: 26px;">$2000</h5>
@@ -33,7 +34,8 @@
                                     </div>
                                 </div>
                                 <div class="card-body pt-0 p-3 text-center">
-                                    <h6 class="text-center mb-0" style="font-size: 24px;">Total Member Salaray By This Year</h6>
+                                    <h6 class="text-center mb-0" style="font-size: 24px;">Total Member Salaray By This Year
+                                    </h6>
                                     <span class="text-xs">Freelance Payment</span>
                                     <hr class="horizontal dark my-3">
                                     <h5 class="mb-0" style="font-size: 26px;">$455.00</h5>
@@ -43,57 +45,52 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                            <div class="card shadow-dark">
-                                <div class="card-header mx-4 p-3 text-center">
-                                    <div
-                                        class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
-                                        <i class="material-icons opacity-10">account_balance_wallet</i>
-                                    </div>
-                                </div>
-                                <div class="card-body pt-0 p-3 text-center">
-                                    <h6 class="text-center mb-0" style="font-size: 24px;">Total Member Salaray Now</h6>
-                                    <span class="text-xs">Freelance Payment</span>
-                                    <hr class="horizontal dark my-3">
-                                    <h5 class="mb-0" style="font-size: 26px;">$455.00</h5>
-                                </div>
+                    <div class="card shadow-dark">
+                        <div class="card-header mx-4 p-3 text-center">
+                            <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                <i class="material-icons opacity-10">account_balance_wallet</i>
                             </div>
                         </div>
+                        <div class="card-body pt-0 p-3 text-center">
+                            <h6 class="text-center mb-0" style="font-size: 24px;">Total Member Salaray Now</h6>
+                            <span class="text-xs">Freelance Payment</span>
+                            <hr class="horizontal dark my-3">
+                            <h5 class="mb-0" style="font-size: 26px;">$455.00</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     {{-- Billing Information --}}
-    <div class="row">
-        <div class="col-md-5 mt-4">
-            <ul class="list-group">
-                @foreach ($memberHistory as $history)
-                    <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg shadow-dark">
-                        <div class="d-flex flex-column">
-                            <h5 class="mb-3 ">{{ $history->Full_Name }}</h5>
-                            <span class="mb-2">Age : <span
-                                    class="text-dark font-weight-bold ms-sm-2">{{ $history->Age }}</span></span>
-                            <span class="mb-2">Gender : <span
-                                    class="text-dark font-weight-bold ms-sm-2">{{ $history->Gender }}</span></span>
-                            <span class="mb-2 ">Phone Number: <span
-                                    class="text-dark ms-sm-2 font-weight-bold">{{ $history->Phone_Number }}</span></span>
-                            <span class="mb-2 ">Game Type : <span
-                                    class="text-dark ms-sm-2 font-weight-bold">{{ $history->Game_Type }}</span>
-                            </span>
-                            <span>Pay : <span class="text-dark ms-sm-2 font-weight-bold">{{ $history->Pay }}
-                                    IQD</span></span>
-                            <span>Course Pay : <span class="text-dark ms-sm-2 font-weight-bold">{{ $history->Course_Pay }}
-                                    IQD</span></span>
-                            <span>Created Date : <span class="text-dark ms-sm-2 font-weight-bold">
-                                    {{ $history->created_at }}</span></span>
-                            <span>Expire Date : <span
-                                    class="text-dark ms-sm-2 font-weight-bold">{{ $history->updated_at }}</span></span>
-                        </div>
-                        <div class="ms-auto text-end">
-                            <a class="btn btn-dark  btn-lg px-3 mb-0"
-                                href="{{ url('/billing/delete/' . $history->id) }}">Delete</a>
-                        </div>
-                    </li>
-                @endforeach
-            </ul>
+    <div class="row mt-5">
+        <div class="border rounded">
+            <table class="table table-hover shadow-dark align-items-center">
+                <thead style="font-size:18px;background-color:#494949d5;color:white;">
+                    <th>Full Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Game Type</th>
+                    <th>Pay</th>
+                    <th>Course Pay</th>
+                    <th>Join Date</th>
+                    <th>Expire Date</th>
+                </thead>
+                <tbody style="font-weight: bold; font-size:20px; text-align:left; color:black;">
+                    @foreach ($memberHistory as $history)
+                        <tr>
+                            <td>{{ $history->Full_Name }}</td>
+                            <td>{{ $history->Age }}</td>
+                            <td>{{ $history->Gender }}</td>
+                            <td>{{ $history->Game_Type }} </td>
+                            <td>{{ $history->Pay }} IQD</td>
+                            <td>{{ $history->Course_Pay }} IQD</td>
+                            <td>{{ $history->created_at }}</td>
+                            <td>{{ $history->updated_at }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 @endsection
