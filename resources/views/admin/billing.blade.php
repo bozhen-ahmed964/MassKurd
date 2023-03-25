@@ -158,7 +158,7 @@
                     @endforeach
 
                     @if ($memberHistory->hasMorePages())
-                        <li><a href="{{ $history->nextPageUrl() }}" rel="next">&raquo;</a></li>
+                        <li><a href="{{ $memberHistory->nextPageUrl() }}" rel="next">&raquo;</a></li>
                     @else
                         <li class="disabled"><span>&raquo;</span></li>
                     @endif

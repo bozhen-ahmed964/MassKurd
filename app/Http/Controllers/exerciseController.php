@@ -12,7 +12,7 @@ class exerciseController extends Controller
 
     public function buildingCourse()
     {
-        $courses = courseModel::all();
+        $courses = courseModel::paginate(12);
         $members = memberModel::all();
         return view('admin.buildingCourse', compact('courses', 'members'));
     }
