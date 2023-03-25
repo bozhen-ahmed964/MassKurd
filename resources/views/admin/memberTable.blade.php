@@ -1,5 +1,53 @@
 @extends('layouts.admin')
 
+<style>
+    .pagination {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .page-number {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .pagination-links {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pagination-links li {
+        margin: 0 5px;
+    }
+
+    .pagination-links li.disabled span,
+    .pagination-links li.active span {
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .pagination-links li a {
+        display: block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #eee;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .pagination-links li a:hover {
+        background-color: #ddd;
+    }
+</style>
+
 
 
 @section('content')
@@ -15,11 +63,10 @@
                 <div class="col-3">
                     <a href="{{ url('/memberTable/sort_By_Name') }}" class="btn btn-info btn-lg">Name</a>
                     <a href="{{ url('/memberTable/sort_By_Gender') }}" class="btn btn-info btn-lg mx-2">Gender</a>
-
                 </div>
             </div>
             <div class="border rounded">
-                <table class="table table-hover shadow-dark align-items-center">
+                <table class="table table-hover align-items-center">
                     <thead style="font-size:18px;background-color:#494949d5;color:white;">
                         <tr>
                             <th>Full Name</th>
@@ -57,11 +104,35 @@
                                 </td>
                             </tr>
                         @endforeach
-
                     </tbody>
                 </table>
-            </div>
 
+                <div class="pagination  ">
+                    <span class="page-number">Page {{ $memberTable->currentPage() }} of
+                        {{ $memberTable->lastPage() }}</span>
+                    <ul class="pagination-links">
+                        @if ($memberTable->onFirstPage())
+                            <li class="disabled"><span>&laquo;</span></li>
+                        @else
+                            <li><a href="{{ $memberTable->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+                        @endif
+
+                        @foreach ($memberTable->getUrlRange(1, $memberTable->lastPage()) as $page => $url)
+                            @if ($page == $memberTable->currentPage())
+                                <li class="active"><span>{{ $page }}</span></li>
+                            @else
+                                <li><a href="{{ $url }}">{{ $page }}</a></li>
+                            @endif
+                        @endforeach
+
+                        @if ($memberTable->hasMorePages())
+                            <li><a href="{{ $memberTable->nextPageUrl() }}" rel="next">&raquo;</a></li>
+                        @else
+                            <li class="disabled"><span>&raquo;</span></li>
+                        @endif
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

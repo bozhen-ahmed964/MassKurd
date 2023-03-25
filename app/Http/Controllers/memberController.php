@@ -37,7 +37,7 @@ class memberController extends Controller
 
     public function memberTable()
     {
-        $memberTable = memberModel::all();
+        $memberTable = memberModel::paginate(10);
         return view('admin.memberTable', compact('memberTable'));
     }
 
