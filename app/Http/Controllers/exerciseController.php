@@ -45,10 +45,10 @@ class exerciseController extends Controller
 
     public function searchExercise(Request $request)
     {
-        $courses = courseModel::all();
+
         $members = memberModel::all();
         $select = $request->input('query');
-        $exerciseData = courseModel::where('Primary_Muscle', 'like', '%' . $select . '%')->get();
+        $exerciseData = courseModel::where('Primary_Muscle', 'like', '%' . $select . '%')->paginate(12);
         return view('admin.searchExercise', compact('exerciseData', 'members'));
     }
 }
