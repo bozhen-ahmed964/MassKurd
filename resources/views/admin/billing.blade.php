@@ -1,5 +1,53 @@
 @extends('layouts.admin')
 
+<style>
+    .pagination {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .page-number {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .pagination-links {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pagination-links li {
+        margin: 0 5px;
+    }
+
+    .pagination-links li.disabled span,
+    .pagination-links li.active span {
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .pagination-links li a {
+        display: block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #eee;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .pagination-links li a:hover {
+        background-color: #ddd;
+    }
+</style>
+
 @section('content')
     <div class="row">
         <div class="col">
@@ -91,6 +139,31 @@
                     @endforeach
                 </tbody>
             </table>
+            <div class="pagination  ">
+                <span class="page-number">Page {{ $memberHistory->currentPage() }} of
+                    {{ $memberHistory->lastPage() }}</span>
+                <ul class="pagination-links">
+                    @if ($memberHistory->onFirstPage())
+                        <li class="disabled"><span>&laquo;</span></li>
+                    @else
+                        <li><a href="{{ $memberHistory->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+                    @endif
+
+                    @foreach ($memberHistory->getUrlRange(1, $memberHistory->lastPage()) as $page => $url)
+                        @if ($page == $memberHistory->currentPage())
+                            <li class="active"><span>{{ $page }}</span></li>
+                        @else
+                            <li><a href="{{ $url }}">{{ $page }}</a></li>
+                        @endif
+                    @endforeach
+
+                    @if ($memberHistory->hasMorePages())
+                        <li><a href="{{ $history->nextPageUrl() }}" rel="next">&raquo;</a></li>
+                    @else
+                        <li class="disabled"><span>&raquo;</span></li>
+                    @endif
+                </ul>
+            </div>
         </div>
     </div>
 @endsection

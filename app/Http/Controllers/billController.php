@@ -12,7 +12,7 @@ class billController extends Controller
     // fetching all data from memberHistory table
     public function billing()
     {
-        $memberHistory = memberHistoryModel::all();
+        $memberHistory = memberHistoryModel::paginate(10);
         return view('admin.billing', compact('memberHistory'));
     }
 

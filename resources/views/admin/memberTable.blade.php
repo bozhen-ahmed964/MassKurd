@@ -106,7 +106,6 @@
                         @endforeach
                     </tbody>
                 </table>
-
                 <div class="pagination  ">
                     <span class="page-number">Page {{ $memberTable->currentPage() }} of
                         {{ $memberTable->lastPage() }}</span>
