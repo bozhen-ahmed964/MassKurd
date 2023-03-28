@@ -64,8 +64,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::put('/update-member/{id}', [App\Http\Controllers\memberController::class, 'updateFunction']);
     Route::delete('/delete-member/{id}', [App\Http\Controllers\memberController::class, 'destroyProfile']);
     Route::get('/delete-member/{id}', [App\Http\Controllers\memberController::class, 'destroy']);
-    Route::get('/memberTable/sort_By_Name', [\App\Http\Controllers\memberController::class, 'sortName']);
-    Route::get('/memberTable/sort_By_Gender', [\App\Http\Controllers\memberController::class, 'sortGender']);
+   
 
 
 
@@ -83,5 +82,5 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/settings/deleteActiveMember', [App\Http\Controllers\settingController::class, 'deleteActiveMember']);
     Route::get('/settings/deleteHistoryMember', [App\Http\Controllers\settingController::class, 'deleteHistoryMember']);
     Route::get('/settings/deleteExercise', [App\Http\Controllers\settingController::class, 'deleteExercise']);
-    
+
 });

@@ -73,18 +73,7 @@ class memberController extends Controller
         return redirect('memberTable');
     }
 
-    public function sortName()
-    {
-        $memberTable = memberModel::orderBy('Full_Name')->get();
-        return view('admin.memberTable', compact('memberTable'));
-    }
-
-    public function sortGender()
-    {
-        $memberTable = memberModel::orderBy('Gender')->get();
-        return view('admin.memberTable', compact('memberTable'));
-    }
-
+    
     public function profile($id)
     {
         $profileData = memberModel::with('course')->find($id);

@@ -58,13 +58,7 @@
                     <h3 class="text-white text-capitalize ps-3 ">Members Table</h3>
                 </div>
             </div>
-            <div class="row my-2">
-                <h3>Sort By : </h3>
-                <div class="col-3">
-                    <a href="{{ url('/memberTable/sort_By_Name') }}" class="btn btn-info btn-lg">Name</a>
-                    <a href="{{ url('/memberTable/sort_By_Gender') }}" class="btn btn-info btn-lg mx-2">Gender</a>
-                </div>
-            </div>
+           
             <div class="border rounded">
                 <table class="table table-hover align-items-center">
                     <thead style="font-size:18px;background-color:#494949d5;color:white;">
