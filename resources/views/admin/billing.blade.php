@@ -64,11 +64,11 @@
                                     </div>
                                 </div>
                                 <div class="card-body pt-0 p-3 text-center">
-                                    <h6 class="text-center mb-0" style="font-size: 24px;">Total Member Salaray By This Month
+                                    <h6 class="text-center mb-0" style="font-size: 24px;">Total Member Salaray Last Month
                                     </h6>
                                     <span class="text-xs">Belong Interactive</span>
                                     <hr class="horizontal dark my-3">
-                                    <h5 class="mb-0" style="font-size: 26px;">$2000</h5>
+                                    <h5 class="mb-0" style="font-size: 26px;">{{ $totalMemberSalarayLastMonth }} IQD</h5>
                                 </div>
                             </div>
                         </div>
@@ -86,12 +86,14 @@
                                     </h6>
                                     <span class="text-xs">Freelance Payment</span>
                                     <hr class="horizontal dark my-3">
-                                    <h5 class="mb-0" style="font-size: 26px;">$455.00</h5>
+                                    <h5 class="mb-0" style="font-size: 26px;">{{ $totalMemberSalarayCurrentMonth }} IQD
+                                    </h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {{-- third square --}}
                 <div class="col-md-3">
                     <div class="card shadow-dark">
                         <div class="card-header mx-4 p-3 text-center">
@@ -103,7 +105,7 @@
                             <h6 class="text-center mb-0" style="font-size: 24px;">Total Member Salaray Now</h6>
                             <span class="text-xs">Freelance Payment</span>
                             <hr class="horizontal dark my-3">
-                            <h5 class="mb-0" style="font-size: 26px;">$455.00</h5>
+                            <h5 class="mb-0" style="font-size: 26px;">{{ $totalMemberSalarayCurrent }} IQD</h5>
                         </div>
                     </div>
                 </div>
