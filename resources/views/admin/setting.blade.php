@@ -15,15 +15,15 @@
                 <tbody style="font-weight: bold; font-size:20px;color:black;">
                     <tr>
                         <td>Deleting All Members In Active Table</td>
-                        <td><a href="{{ url('/settings/deleteActiveMember') }}" class="btn btn-dark">Delete All</a></td>
+                        <td><a href="{{ url('/settings/deleteActiveMember') }}" class="btn btn-primary">Delete All</a></td>
                     </tr>
                     <tr>
                         <td>Deleting All Members In History Table</td>
-                        <td><a href="{{ url('/settings/deleteHistoryMember') }}" class="btn btn-dark">Delete All</a></td>
+                        <td><a href="{{ url('/settings/deleteHistoryMember') }}" class="btn btn-primary">Delete All</a></td>
                     </tr>
                     <tr>
                         <td>Deleting All Exercises</td>
-                        <td><a href="{{ url('/settings/deleteExercise') }}" class="btn btn-dark">Delete All</a></td>
+                        <td><a href="{{ url('/settings/deleteExercise') }}" class="btn btn-primary">Delete All</a></td>
                     </tr>
                 </tbody>
             </table>
