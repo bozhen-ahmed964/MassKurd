@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="text-end pt-1">
                                     <strong class="text-sm mb-0 text-capitalize">Total Member Salary Current </strong>
-                                    <h4 class="mb-0">{{ $totalMemberSalarayCurrent }}</h4>
+                                    <h4 class="mb-0">{{ $totalMemberSalarayCurrent }} IQD</h4>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="text-end pt-1">
                                     <strong class="text-sm mb-0 text-capitalize">Total member Salary Last Month </strong>
-                                    <h4 class="mb-0">{{ $totalMemberSalarayLastMonth }}</h4>
+                                    <h4 class="mb-0">{{ $totalMemberSalarayLastMonth }} IQD</h4>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                                 </div>
                                 <div class="text-end pt-1">
                                     <strong class="text-sm mb-0 text-capitalize">Total member Salary Current Month</strong>
-                                    <h4 class="mb-0">{{ $totalMemberSalarayCurrentMonth }}</h4>
+                                    <h4 class="mb-0">{{ $totalMemberSalarayCurrentMonth }} IQD</h4>
                                 </div>
                             </div>
                         </div>
