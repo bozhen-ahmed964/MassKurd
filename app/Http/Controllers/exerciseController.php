@@ -37,24 +37,6 @@ class exerciseController extends Controller
         return redirect('/buildingCourse/searchExercise');
     }
 
-    public function editExercise($id)
-    {
-        $exerciseData = courseModel::find($id);
-        return view('admin.editExercise', compact('exerciseData'));
-    }
-
-    public function upadateExercise(Request $request, $id)
-    {
-        $exerciseData = courseModel::find($id);
-        $exerciseData->Exercise_Name = $request->input('Exercise_Name');
-        $exerciseData->Primary_Muscle = $request->input('Primary_Muscle');
-        $exerciseData->image = $request->input('image');
-        $exerciseData->update();
-        Alert::success('Updated', 'Exercise Updated Successfully');
-        return view('admin.exerciseDetail', compact('exerciseData'));
-    }
-
-
     public function deleteExercise($id)
     {
         $exerciseData = courseModel::find($id);
@@ -62,8 +44,6 @@ class exerciseController extends Controller
         Alert::success('Deleted', 'Exercise Deleted Successfully');
         return redirect('/buildingCourse');
     }
-
-
 
 
     public function searchExercise(Request $request)

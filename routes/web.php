@@ -50,8 +50,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/buildingCourse/searchExercise', [App\Http\Controllers\exerciseController::class, 'searchExercise']);
     Route::post('/insertExercise', [App\Http\Controllers\exerciseController::class, 'insertExercise']);
     Route::post('/add_exercise', [App\Http\Controllers\exerciseController::class, 'addExercise']);
-    Route::get('/buildingCourse/editExercise/{id}', [App\Http\Controllers\exerciseController::class, 'editExercise']);
-    Route::put('/buildingCourse/updateExercise/{id}', [App\Http\Controllers\exerciseController::class, 'upadateExercise']);
     Route::get('/buildingCourse/delete/{id}', [App\Http\Controllers\exerciseController::class, 'deleteExercise']);
 
 
