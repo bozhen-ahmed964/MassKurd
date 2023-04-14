@@ -150,9 +150,10 @@
                                     <div class="py-4">
                                         <h4>{{ $exercises->Exercise_Name }}</h4>
                                         <h6> Primary Mucle : {{ $exercises->Primary_Muscle }}</h6>
-                                        <a href="{{ url('/buildingCourse/exerciseDetail/' . $exercises->id) }}"
-                                            class="btn btn-primary btn-lg border rounded shadow">Show
-                                            More</a>
+                                        <a href="{{ url('/buildingCourse/editExercise/' . $exercises->id) }}"
+                                            class="btn btn-dark btn-lg border rounded shadow">Edit</a>
+                                        <a href="{{ url('/buildingCourse/delete/' . $exercises->id) }}"
+                                            class="btn btn-primary btn-lg border rounded shadow">Delete</a>
                                         <div class="form-check">
                                             <input value="{{ $exercises->id }}" name="exercises[]"
                                                 id="formCheck-{{ $exercises->id }}" class="form-check-input"
