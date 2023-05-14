@@ -83,8 +83,7 @@ class memberController extends Controller
 
     public function profile($id)
     {
-        $profileData = memberModel::with('course')->find($id);
-        // dd($profileData);
+        $profileData = memberModel::with(['course', 'trainers'])->find($id);
         return view('admin.profile', compact('profileData'));
     }
 

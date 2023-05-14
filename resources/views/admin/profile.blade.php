@@ -72,6 +72,16 @@
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">Game Type:</strong> &nbsp;
                                                     {{ $profileData->Game_Type }}</li>
+                                                <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
+                                                        class="text-dark">Trainers:</strong> &nbsp;
+                                                    @if ($profileData->trainers->count() > 0)
+                                                        @foreach ($profileData->trainers as $trainer)
+                                                            {{ $trainer->Trainer_Name }}{{ !$loop->last ? ', ' : '' }}
+                                                        @endforeach
+                                                    @else
+                                                        No Trainer Assigned
+                                                    @endif
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -86,7 +96,8 @@
                                                         class="text-dark">Pay:</strong> &nbsp; {{ $profileData->Pay }}IQD
                                                 </li>
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
-                                                        class="text-dark">Course Pay:</strong> &nbsp; {{ $profileData->Course_Pay }}IQD
+                                                        class="text-dark">Course Pay:</strong> &nbsp;
+                                                    {{ $profileData->Course_Pay }}IQD
                                                 </li>
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">Start Date:</strong> &nbsp;
