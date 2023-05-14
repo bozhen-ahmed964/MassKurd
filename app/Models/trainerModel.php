@@ -18,4 +18,10 @@ class trainerModel extends Model
         'created_at',
         'updated_at',
     ];
+
+    public function members()
+    {
+        return $this->belongsToMany(memberModel::class, 'member_trainer', 'trainer_id', 'member_id');
+    }
+
 }

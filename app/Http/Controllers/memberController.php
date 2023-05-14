@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\memberModel;
+use App\Models\trainerModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -13,7 +14,8 @@ class memberController extends Controller
 
     public function addMember()
     {
-        return view('admin.addMember');
+        $trainers = trainerModel::all();
+        return view('admin.addMember', ['trainers' => $trainers]);
     }
 
 
@@ -31,6 +33,11 @@ class memberController extends Controller
         $member->Course_Pay = $request->input('Course_Pay');
         $member->updated_at = $request->input('end_at');
         $member->save();
+
+
+        $trainer = trainerModel::find($request->input('trainer_id'));
+        $member->trainers()->attach($trainer);
+
         Alert::success('Added', 'Member Added Successfully');
         return redirect('/addMember');
     }
@@ -73,7 +80,7 @@ class memberController extends Controller
         return redirect('memberTable');
     }
 
-    
+
     public function profile($id)
     {
         $profileData = memberModel::with('course')->find($id);

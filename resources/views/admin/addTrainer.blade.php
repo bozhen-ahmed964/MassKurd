@@ -66,14 +66,16 @@
                                     <p><strong class="text-dark">Phone_No :</strong> {{ $trainerss->Phone_Number }}</p>
                                     <p><strong class="text-dark">Pay :</strong> {{ $trainerss->Pay }} IQD</p>
                                     <p><strong class="text-dark">Join Date :</strong> {{ $trainerss->created_at }}</p>
+                                    <p><strong class="text-dark">Give Courses :</strong> 145 <button class="btn btn-primary btn-sm mt-3 mx-3">Clear</button></p>
+                                    <p><strong class="text-dark">Total Course In Cash : </strong> 345,000 IQD</p>
                                 </div>
                                 <div>
-
                                     <a href="{{ url('deleteTrainer/' . $trainerss->id) }}"
                                         class="btn btn-primary btn-lg">Delete</a>
                                 </div>
                             </div>
                         </div>
+
                     @endforeach
                 </div>
 

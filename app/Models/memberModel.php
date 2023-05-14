@@ -29,4 +29,9 @@ class memberModel extends Model
         return $this->belongsToMany(courseModel::class, 'member_course', 'member_id', 'course_id');
 
     }
+
+    public function trainers()
+    {
+        return $this->belongsToMany(trainerModel::class, 'member_trainer', 'member_id', 'trainer_id');
+    }
 }
