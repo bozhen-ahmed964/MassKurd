@@ -35,6 +35,14 @@
                                 <option value="Female">Female</option>
                             </select>
                         </label>
+                        <label class="form-label" style="color:rgb(0, 0, 0);"> Trainer :&nbsp;<br>
+                            <select name="trainer_id" class="form-control form-control-lg shadow-dark"
+                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
+                                @foreach ($trainers as $trainer)
+                                    <option value="{{ $trainer->id }}">{{ $trainer->Trainer_Name }}</option>
+                                @endforeach
+                            </select>
+                        </label>
                     </div>
 
                     <div class="col-3">
@@ -70,7 +78,6 @@
                                 <option value="BodyBuilding">BodyBuilding</option>
                             </select>
                         </label>
-
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Pay :<br>
                             <select name="Pay" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">

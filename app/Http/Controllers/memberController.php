@@ -50,8 +50,9 @@ class memberController extends Controller
 
     public function editMember($id)
     {
+        $trainers = trainerModel::all();
         $member = memberModel::find($id);
-        return view('admin.edit', compact('member'));
+        return view('admin.edit', compact('member', 'trainers'));
     }
 
     public function updateFunction(Request $request, $id)
@@ -68,6 +69,11 @@ class memberController extends Controller
         $member->Course_Pay = $request->input('Course_Pay');
         $member->updated_at = $request->input('end_at');
         $member->update();
+
+
+        $trainer = trainerModel::find($request->input('trainer_id'));
+        $member->trainers()->sync([$trainer->id]);
+
         Alert::success('Info', 'Info Updated Successfully');
         return redirect('memberTable');
     }
