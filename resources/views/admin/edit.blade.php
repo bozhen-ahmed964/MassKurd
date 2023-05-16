@@ -31,8 +31,8 @@
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Gender :&nbsp;<br>
                             <select name="Gender" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option value="male" @if ($member->Gender == 'male') selected @endif>Male</option>
+                                <option value="female" @if ($member->Gender == 'female') selected @endif>Female</option>
                             </select>
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Trainer :&nbsp;<br>
@@ -73,28 +73,33 @@
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Game Type :<br>
                             <select name="Game_Type" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
-                                <option value="Cardio">Cardio</option>
-                                <option value="Fitness">Fitness</option>
-                                <option value="BodyBuilding">BodyBuilding</option>
+                                <option value="Cardio" @if ($member->Game_Type == 'Cardio') selected @endif>Cardio</option>
+                                <option value="Fitness" @if ($member->Game_Type == 'Fitness') selected @endif>Fitness</option>
+                                <option value="BodyBuilding" @if ($member->Game_Type == 'BodyBuilding') selected @endif>BodyBuilding
+                                </option>
                             </select>
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Pay :<br>
                             <select name="Pay" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
-                                <option value="30,000">1 Month 30,000 IQD</option>
-                                <option value="90,000">3 Month 90,000 IQD</option>
+                                <option value="30,000" @if ($member->Pay == '30,000') selected @endif>1 Month 30,000 IQD
+                                </option>
+                                <option value="90,000" @if ($member->Pay == '90,000') selected @endif>3 Month 90,000 IQD
+                                </option>
                             </select>
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Course Pay :<br>
                             <select name="Course_Pay" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
-                                <option value="5000"> Exercise Course 5,000 IQD</option>
-                                <option value="10000"> Exercise Course 10,000 IQD</option>
+                                <option value="5000" @if ($member->Course_Pay == '5000') selected @endif>Exercise Course
+                                    5,000 IQD</option>
+                                <option value="10000" @if ($member->Course_Pay == '10000') selected @endif>Exercise Course
+                                    10,000 IQD</option>
                             </select>
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> End Date :<br>
                             <input class="form-control form-control-lg shadow-dark" type="date"
-                                value="{{ $member->updated_at }}"
+                                value="{{ $member->updated_at->format('Y-m-d') }}"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                                 name="end_at">
                         </label>
