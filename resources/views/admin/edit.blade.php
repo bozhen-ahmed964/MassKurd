@@ -61,6 +61,7 @@
                     </div>
 
                     <div class="col-3">
+
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Game Type :<br>
                             <select name="Game_Type" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
@@ -69,11 +70,19 @@
                                 <option value="BodyBuilding">BodyBuilding</option>
                             </select>
                         </label>
+
                         <label class="form-label" style="color:rgb(0, 0, 0);"> Pay :<br>
                             <select name="Pay" class="form-control form-control-lg shadow-dark"
                                 style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
-                                <option value="30,000">30,000</option>
-                                <option value="90,000">90,000</option>
+                                <option value="30,000">1 Month 30,000 IQD</option>
+                                <option value="90,000">3 Month 90,000 IQD</option>
+                            </select>
+                        </label>
+                        <label class="form-label" style="color:rgb(0, 0, 0);"> Course Pay :<br>
+                            <select name="Course_Pay" class="form-control form-control-lg shadow-dark"
+                                style="width: 150px;border-radius:10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px">
+                                <option value="5000"> Exercise Course 5,000 IQD</option>
+                                <option value="10000"> Exercise Course 10,000 IQD</option>
                             </select>
                         </label>
                         <label class="form-label" style="color:rgb(0, 0, 0);"> End Date :<br>
