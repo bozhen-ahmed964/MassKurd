@@ -61,13 +61,12 @@
                             <div>
                                 <div class="py-4">
                                     <h4>{{ $trainerss->Trainer_Name }}</h4>
-                                    <p><strong class="text-dark">Gender :</strong> {{ $trainerss->Gender }}</p>
-                                    <p><strong class="text-dark">Age :</strong> {{ $trainerss->Age }}</p>
-                                    <p><strong class="text-dark">Phone_No :</strong> {{ $trainerss->Phone_Number }}</p>
-                                    <p><strong class="text-dark">Pay :</strong> {{ $trainerss->Pay }} IQD</p>
-                                    <p><strong class="text-dark">Join Date :</strong> {{ $trainerss->created_at }}</p>
-                                    <p><strong class="text-dark">Give Courses :</strong> 145 <button class="btn btn-primary btn-sm mt-3 mx-3">Clear</button></p>
-                                    <p><strong class="text-dark">Total Course In Cash : </strong> 345,000 IQD</p>
+                                    <p><strong class="text-dark">Gender:</strong> {{ $trainerss->Gender }}</p>
+                                    <p><strong class="text-dark">Age:</strong> {{ $trainerss->Age }}</p>
+                                    <p><strong class="text-dark">Phone_No:</strong> {{ $trainerss->Phone_Number }}</p>
+                                    <p><strong class="text-dark">Pay:</strong> {{ $trainerss->Pay }} IQD</p>
+                                    <p><strong class="text-dark">Join Date:</strong> {{ $trainerss->created_at }}</p>
+                                    <p><strong class="text-dark">Give Courses: </strong> {{ $trainerss->members->count() }}</p>
                                 </div>
                                 <div>
                                     <a href="{{ url('deleteTrainer/' . $trainerss->id) }}"
@@ -75,7 +74,6 @@
                                 </div>
                             </div>
                         </div>
-
                     @endforeach
                 </div>
 
