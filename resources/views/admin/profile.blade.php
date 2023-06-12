@@ -101,10 +101,10 @@
                                                 </li>
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">Start Date:</strong> &nbsp;
-                                                    {{ $profileData->created_at }}</li>
+                                                    {{ $profileData->created_at->format('Y-m-d') }}</li>
                                                 <li class="list-group-item border-0 ps-0 pt-0 text-lg"><strong
                                                         class="text-dark">End Date:</strong> &nbsp;
-                                                    {{ $profileData->updated_at }}</li>
+                                                    {{ $profileData->updated_at->format('Y-m-d') }}</li>
                                             </ul>
                                         </div>
                                     </div>
