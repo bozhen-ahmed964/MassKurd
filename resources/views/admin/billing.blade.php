@@ -136,8 +136,8 @@
                                 <td>{{ $history->Game_Type }} </td>
                                 <td>{{ $history->Pay }} IQD</td>
                                 <td>{{ $history->Course_Pay }} IQD</td>
-                                <td>{{ $history->created_at }}</td>
-                                <td>{{ $history->updated_at }}</td>
+                                <td>{{ $history->created_at->format('Y-m-d') }}</td>
+                                <td>{{ $history->updated_at->format('Y-m-d') }}</td>
                             </tr>
                         @endforeach
                     </tbody>

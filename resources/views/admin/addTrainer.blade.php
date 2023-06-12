@@ -65,8 +65,10 @@
                                     <p><strong class="text-dark">Age:</strong> {{ $trainerss->Age }}</p>
                                     <p><strong class="text-dark">Phone_No:</strong> {{ $trainerss->Phone_Number }}</p>
                                     <p><strong class="text-dark">Pay:</strong> {{ $trainerss->Pay }} IQD</p>
-                                    <p><strong class="text-dark">Join Date:</strong> {{ $trainerss->created_at }}</p>
-                                    <p><strong class="text-dark">Give Courses: </strong> {{ $trainerss->members->count() }}</p>
+                                    <p><strong class="text-dark">Join Date:</strong>
+                                        {{ $trainerss->created_at->format('Y-m-d') }}</p>
+                                    <p><strong class="text-dark">Give Courses: </strong> {{ $trainerss->members->count() }}
+                                    </p>
                                 </div>
                                 <div>
                                     <a href="{{ url('deleteTrainer/' . $trainerss->id) }}"

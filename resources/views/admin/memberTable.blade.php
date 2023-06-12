@@ -58,7 +58,7 @@
                     <h3 class="text-white text-capitalize ps-3 ">Members Table</h3>
                 </div>
             </div>
-           
+
             <div class="border rounded">
                 <table class="table table-hover align-items-center">
                     <thead style="font-size:18px;background-color:#494949d5;color:white;">
@@ -80,8 +80,8 @@
                                 <td>{{ $item->Age }}</td>
                                 <td>{{ $item->Gender }}</td>
                                 <td>{{ $item->Pay }}IQD</td>
-                                <td>{{ $item->created_at }}</td>
-                                <td>{{ $item->updated_at }}</td>
+                                <td>{{ $item->created_at->format('Y-m-d') }}</td>
+                                <td>{{ $item->updated_at->format('Y-m-d') }}</td>
                                 <td>
                                     <button
                                         class="{{ $item->created_at < $item->updated_at ? 'btn btn-success btn-sm' : 'btn btn-dark btn-sm' }}"
