@@ -68,20 +68,20 @@
                     <Select
                         class="form-control form-control-lg shadow-dark form-outline"style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                         name="Primary_Muscle">
-                        <option value="chest">Chest</option>
-                        <option value="trapezius">trapezius</option>
-                        <option value="shoulder">Shoulder</option>
-                        <option value="back / wing">Back / Wing</option>
-                        <option value="erector spinae">Erector Spinae</option>
-                        <option value="biceps">Biceps</option>
-                        <option value="triceps">Triceps</option>
-                        <option value="forearm">Forearm</option>
-                        <option value="abs / core">Abs / Core</option>
-                        <option value="leg">Leg</option>
-                        <option value="caif">Caif</option>
-                        <option value="hips">Hips</option>
-                        <option value="cardio">Cardio</option>
-                        <option value="full body">Full Body</option>
+                        <option value="chest">Chest الصدر</option>
+                        <option value="trapezius">trapezius العضلة المشطوفة</option>
+                        <option value="shoulder">Shoulder الكتف</option>
+                        <option value="back / wing">Back / Wing الظهر الجناح</option>
+                        <option value="erector spinae">Erector Spinae العضلة الشوكية</option>
+                        <option value="biceps">Biceps البايسبس</option>
+                        <option value="triceps">Triceps الترايسبس</option>
+                        <option value="forearm">Forearm الساعد</option>
+                        <option value="abs / core">Abs / Core البطن النواة</option>
+                        <option value="leg">Leg الساق</option>
+                        <option value="caif">Caif السمانة</option>
+                        <option value="hips">Hips الوركين</option>
+                        <option value="cardio">Cardio التمارين القلبية</option>
+                        <option value="full body">Full Body الجسم بأكمله</option>
 
                     </Select>
                 </label>
@@ -100,20 +100,20 @@
                     <Select
                         class="form-control form-control-lg shadow-dark form-outline"style="width: 310px;border-radius: 10px;border:2px solid rgb(0, 0, 0);color:rgb(0, 0, 0);font-size:22px"
                         name="query">
-                        <option value="chest">Chest</option>
-                        <option value="trapezius">trapezius</option>
-                        <option value="shoulder">Shoulder</option>
-                        <option value="back / wing">Back / Wing</option>
-                        <option value="erector spinae">Erector Spinae</option>
-                        <option value="biceps">Biceps</option>
-                        <option value="triceps">Triceps</option>
-                        <option value="forearm">Forearm</option>
-                        <option value="abs / core">Abs / Core</option>
-                        <option value="leg">Leg</option>
-                        <option value="caif">Caif</option>
-                        <option value="hips">Hips</option>
-                        <option value="cardio">Cardio</option>
-                        <option value="full body">Full Body</option>
+                        <option value="chest">Chest الصدر</option>
+                        <option value="trapezius">trapezius العضلة المشطوفة</option>
+                        <option value="shoulder">Shoulder الكتف</option>
+                        <option value="back / wing">Back / Wing الظهر الجناح</option>
+                        <option value="erector spinae">Erector Spinae العضلة الشوكية</option>
+                        <option value="biceps">Biceps البايسبس</option>
+                        <option value="triceps">Triceps الترايسبس</option>
+                        <option value="forearm">Forearm الساعد</option>
+                        <option value="abs / core">Abs / Core البطن النواة</option>
+                        <option value="leg">Leg الساق</option>
+                        <option value="caif">Caif السمانة</option>
+                        <option value="hips">Hips الوركين</option>
+                        <option value="cardio">Cardio التمارين القلبية</option>
+                        <option value="full body">Full Body الجسم بأكمله</option>
                     </Select>
                 </label>
                 <button class="btn btn-dark btn-lg" type="submit"
